@@ -1,0 +1,8 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@font-face {
+    font-family: 'Glacial'; 
+    src: url('./static/fonts/GlacialIndifference-Regular.otf') format('opentype');
+  }
