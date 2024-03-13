@@ -6,3 +6,7 @@
     font-family: 'Glacial'; 
     src: url('./static/fonts/GlacialIndifference-Regular.otf') format('opentype');
   }
+@font-face {
+    font-family: 'GlacialBold'; 
+    src: url('./static/fonts/GlacialIndifference-Bold.otf') format('opentype');
+  }

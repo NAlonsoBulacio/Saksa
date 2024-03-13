@@ -1,0 +1,100 @@
+/* Carousel container */
+.carousel-div {
+    position: relative;
+    height: 80vh; /* Alto igual al alto del viewport */
+    overflow: hidden;
+  }
+  
+  
+  .carousel-slider {
+    position: relative;
+    height: 100vh;
+  }
+  
+  .carousel-slider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Color de fondo con transparencia */
+    z-index: 1; /* Coloca este elemento sobre la imagen */
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la relación de aspecto y cubre toda la pantalla */
+    z-index: 0; /* Coloca la imagen detrás del elemento con el filtro */
+  }
+
+
+  .title-over {
+    position: absolute;
+    top: 30%; /* Coloca el texto en el centro vertical */
+    left: 20%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: white; /* Color del texto */
+    text-align: left; /* Alineación del texto */
+    padding: 10px; /* Espacio alrededor del texto */
+    z-index: 2;
+    letter-spacing: 6px;
+  }
+  .title-over-image {
+    position: absolute;
+    top: 52%; /* Coloca el texto en el centro vertical */
+    left: 20%; /* Coloca el texto en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: white; /* Color del texto */
+    text-align: left; /* Alineación del texto */
+    padding: 10px; /* Espacio alrededor del texto */
+    z-index: 2;
+  }
+  @media (max-width: 768px) {
+    .carousel-div {
+      height: 80vh; 
+    }
+    .carousel-slider {
+      height: 80vh;
+    }
+    .carousel-img {
+      height: 100%; 
+      width: auto; 
+    }
+    .title-over{
+      top: 26%; 
+  }
+  .title-over-image{
+    top: 49%; 
+  }
+
+  
+}
+
+  /* New CSS class for the image animation */
+.image-fade-in-zoom {
+  animation: fadeInZoom 11s linear, fadeOpacity 0.3s ease-in-out; /* Adjusted durations */
+  transform: scale(1); /* Start with normal size */
+}
+
+@keyframes fadeInZoom {
+  0% {
+    transform: scale(1); /* Start with a slightly smaller size */
+  }
+  100% {
+    transform: scale(1.2); /* End with the original size */
+  }
+}
+
+@keyframes fadeOpacity {
+  0% {
+    opacity: 0.6; /* Start with half opacity */
+  }
+  100% {
+    opacity: 1; /* End with full opacity */
+  }
+}
