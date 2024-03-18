@@ -7,13 +7,13 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoMailOutline } from "react-icons/io5";
 const DescriptionContact = () => {
   return (
-    <div className="w-full flex flex-wrap justify-center items-start py-10">
-      <div className="w-1/2 flex flex-wrap justify-center items-center space-y-6 mt-4">
-        <p className="w-full text-left text-gray-500 text-2xl tracking-[0.3rem]">
+    <div className="w-full flex flex-wrap justify-center items-start py-10 space-y-8 lg:space-y-0">
+      <div className="w-full lg:w-1/2 flex flex-wrap justify-center items-center space-y-6 mt-4">
+        <p className="w-full text-center lg:text-left text-gray-500 text-xl lg:text-2xl tracking-[0.3rem]">
           SOLICITANOS INFORMACIÓN
         </p>
         <div className="w-full">
-          <p className="text-left text-5xl font-normal text-green-800">
+          <p className="text-left text-3xl lg:text-5xl font-bold text-green-800">
             ¿Que tienes en mente?
           </p>
         </div>
@@ -21,6 +21,9 @@ const DescriptionContact = () => {
           <h1>
             Te escucharemos encantados, cuéntanos sobre tu propuesta <br/> para asesorarte y darte un presupuesto adaptado a tus necesidades.
           </h1>
+        </div>
+        <div className="w-full flex justify-center items-start">
+        <ContactForm />
         </div>
         <div className="w-full flex justify-start ">
           <div className="w-1/5">
@@ -76,7 +79,7 @@ const DescriptionContact = () => {
           <AiOutlineInstagram className=" text-2xl" />
         </div>
       </div>
-      <div className="w-[40%] flex justify-end items-center">
+      <div className="w-[40%] hidden lg:flex justify-end items-center">
         <ContactForm />
       </div>
     </div>

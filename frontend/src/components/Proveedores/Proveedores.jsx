@@ -15,7 +15,7 @@ const Proveedores = () => {
   return (
     <div className="flex flex-wrap justify-center items-center py-20">
       <div className="w-full flex justify-center items-center ">
-        <h1 className="text-gray-800 text-2xl font-barlow-400 tracking-[0.3rem]">NUESTROS PROVEEDORES </h1>
+        <h1 className="text-gray-800 text-center lg:text-left text-xl lg:text-2xl font-barlow-400 tracking-[0.3rem]">REFERENTES COMERCIALES </h1>
       </div>
       <div className="w-full flex justify-center ">
             <div className="w-1/5">

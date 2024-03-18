@@ -17,8 +17,8 @@ const AboutUs = () => {
   return (
     <div className="">
       <FlyerAboutUs />
-      <div className="py-12 bg-gray-100">
-        <div className="lg:px-10 xl:px-32 bg-gray-100">
+      <div className="py-6 lg:py-12 bg-gray-100 px-2 lg:px-10 xl:px-32">
+        <div className=" bg-gray-100">
           <WhoAreWe img={img} />
           <Ant hormiga={hormiga} />
           <img className="rounded-xl" src={perfil} alt="" />

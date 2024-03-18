@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div>
       <FlyerAboutUs />
-      <div className="px-0 lg:px-10 xl:px-20">
+      <div className="px-2 lg:px-10 xl:px-20">
         <DescriptionContact />
       </div>
       <NavBar />

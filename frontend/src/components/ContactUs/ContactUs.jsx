@@ -3,7 +3,7 @@ const ContactUs = () => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center space-y-4">
       <div className="w-full flex justify-center items-center">
-        <h1 className="text-green-800 text-3xl font-bold tracking-[0.2rem]">CUÉNTANOS SOBRE TU PROYECTO</h1>
+        <h1 className="text-green-800 text-center text-2xl lg:text-3xl font-bold tracking-[0.2rem]">CUÉNTANOS SOBRE TU IDEA</h1>
       </div>
       <div className="w-full flex justify-center items-center py-2">
         <a href="/contacto">

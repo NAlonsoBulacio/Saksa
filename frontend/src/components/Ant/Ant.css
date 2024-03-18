@@ -4,11 +4,5 @@
   }
   
   .antDiv.show {
-    height: 400px; 
+    height: 780px; 
   }
-
-  /* @media screen and (max-width: 600px) {
-    .antDiv.show {
-      max-height: 200px; 
-    }
-  } */

@@ -28,7 +28,7 @@
   .carousel-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Mantiene la relación de aspecto y cubre toda la pantalla */
+    object-fit: cover;
     z-index: 0; /* Coloca la imagen detrás del elemento con el filtro */
   }
 
@@ -56,7 +56,7 @@
   }
   @media (max-width: 768px) {
     .carousel-div {
-      height: 80vh; 
+      height: 60vh; 
     }
     .carousel-slider {
       height: 80vh;

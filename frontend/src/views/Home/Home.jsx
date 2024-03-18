@@ -21,11 +21,11 @@ const Home = () => {
         ></div>
       </div>
       <div
-        className="flex flex-wrap justify-center items-center bg-gray-100 space-y-14 py-20"
+        className="flex flex-wrap justify-center items-center bg-gray-100 space-y-14 py-20 px-4 lg:px-10 xl:px-20"
         // style={{ backgroundColor: "#04302f " }}
       >
-        <div className="w-full flex justify-center items-center px-64">
-          <h1 className="font-glacial-bold text-5xl text-center text-emerald-800">
+        <div className="w-full flex justify-center items-center px-0 lg:px-10 xl:px-64">
+          <h1 className="font-glacial-bold text-2xl lg:text-5xl text-center text-emerald-800">
             Somos un estudio con 30 años de trayectoria de labor profesional en
             Arquitectura, y más de 300.000 m2 construidos.
           </h1>
@@ -34,7 +34,7 @@ const Home = () => {
         <OurServices />
       </div>
       <NewCarousel />
-      <div className="bg-gray-100 py-14 space-y-20">
+      <div className="bg-gray-100 py-14 space-y-20 px-2 lg:px-10 xl:px-20">
         <ItemsHome />
         <ContactUs />
       </div>

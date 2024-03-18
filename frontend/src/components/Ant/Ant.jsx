@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BiChevronDown } from "react-icons/bi";
 import arrowdown from "../../assets/arrow-down.svg";
 import "./Ant.css";
 const Ant = ({ hormiga }) => {
@@ -11,22 +10,22 @@ const Ant = ({ hormiga }) => {
   return (
     <div className="flex flex-wrap justify-center items-start space-y-8 py-8">
       <div className="w-full flex justify-center items-start">
-        <h1 className="w-full text-center text-5xl font-bold text-green-800">
+        <h1 className="w-full text-center text-3xl lg:text-5xl font-bold text-green-800">
           NUESTRA MARCA
         </h1>
       </div>
       <div className="w-full flex justify-center items-start">
-        <img src={hormiga} alt="hormiga" className="w-64 cursor-pointer" 
+        <img src={hormiga} alt="hormiga" className="w-48 lg:w-64 cursor-pointer -rotate-6" 
         onClick={() => handleOpenDiv()}
         />
       </div>
       <div
-        className={` w-auto flex justify-center flex-wrap items-start text-left overflow-hidden  transition-transform duration-500 ease-in-out`}
+        className={` w-auto flex justify-between lg:justify-center flex-wrap items-start text-left overflow-hidden  transition-transform duration-500 ease-in-out px-2 lg:px-0`}
       >
         <div
           className={`antDiv ${
             openDiv ? "show" : ""
-          } justify-center flex-wrap items-start text-left flex w-2/3 space-y-4 border-b-2 border-gray-400 cursor-pointer text-xl text-gray-800`}
+          } justify-center flex-wrap items-start text-left flex w-[93%] space-y-4 border-b-2 border-gray-400 cursor-pointer text-lg lg:text-xl text-gray-800`}
           onClick={() => handleOpenDiv()}
         >
           <p className="w-full   ">
@@ -64,7 +63,7 @@ const Ant = ({ hormiga }) => {
             alt="arrow"
             className={`${
               openDiv ? "rotate-180" : "rotate-0"
-            } w-8 transition-transform duration-500 ease-in-out`}
+            } w-6 transition-transform duration-500 ease-in-out`}
           />
         </div>
       </div>
