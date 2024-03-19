@@ -11,7 +11,7 @@ const WhoAreWe = ({ img }) => {
             className="h-full object-cover object-center "
           />
         </div>
-        <div className="w-full lg:w-1/2 flex flex-wrap justify-center items-start text-left text-xl font-barlow-400 text-gray-800 px-0 lg:px-12 space-y-4">
+        <div className="w-full lg:w-[47%] flex flex-wrap justify-center items-start text-left text-xl font-barlow-400 text-gray-800 px-0 lg:px-12 space-y-4">
           <div className="w-full">
             <h1 className="tracking-[0.3rem] text-gray-500 text-xl lg:text-2xl">
               SAKSA ARQUITECTURA
@@ -20,7 +20,7 @@ const WhoAreWe = ({ img }) => {
           <img
             src={img}
             alt=""
-            className="h-full object-cover object-center "
+            className="lg:hidden h-full object-cover object-center "
           />
           <div className="w-full">
             <p className="text-left text-4xl font-bold text-green-800">

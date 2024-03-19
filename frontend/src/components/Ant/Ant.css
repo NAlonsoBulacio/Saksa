@@ -4,5 +4,14 @@
   }
   
   .antDiv.show {
-    height: 780px; 
+    height:460px; 
   }
+
+  @media (max-width: 768px) {
+    .antDiv {
+      height: 36px;
+    }
+    .antDiv.show {
+      height: 700px; 
+    }
+}

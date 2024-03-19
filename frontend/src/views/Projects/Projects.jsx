@@ -98,29 +98,32 @@ const Projects = () => {
           PROYECTOS
         </h1>
         <div className="w-full flex justify-center ">
-          <label
-            htmlFor="filter"
-            className="block lg:hidden text-sm font-medium text-gray-700"
-          >
-            Tipo de Propiedad
-          </label>
-          <select
-            id="filter"
-            name="filter"
-            value={filter}
-            onChange={handleChange}
-            className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-          >
-            {options.map((option) => (
-              <option
-                key={option.value}
-                value={option.value}
-                data-type={option.type}
-              >
-                {option.label}
-              </option>
-            ))}
-          </select>
+          <div className="flex w-full lg:hidden">
+            <label
+              htmlFor="filter"
+              className="block lg:hidden text-sm font-medium text-gray-700"
+            >
+              Tipo de Propiedad
+            </label>
+            <select
+              id="filter"
+              name="filter"
+              value={filter}
+              onChange={handleChange}
+              className="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            >
+              {options.map((option) => (
+                <option
+                  key={option.value}
+                  value={option.value}
+                  data-type={option.type}
+                >
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
+
           <ul className="hidden lg:flex flex-wrap justify-center lg:justify-between items-center space-x-6 text-xl">
             <li
               className={` ${

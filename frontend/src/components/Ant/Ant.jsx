@@ -25,7 +25,7 @@ const Ant = ({ hormiga }) => {
         <div
           className={`antDiv ${
             openDiv ? "show" : ""
-          } justify-center flex-wrap items-start text-left flex w-[93%] space-y-4 border-b-2 border-gray-400 cursor-pointer text-lg lg:text-xl text-gray-800`}
+          } justify-center flex-wrap items-start text-left flex w-[93%] lg:w-[60%] space-y-4 border-b-2 border-gray-400 cursor-pointer text-lg lg:text-xl text-gray-800`}
           onClick={() => handleOpenDiv()}
         >
           <p className="w-full   ">

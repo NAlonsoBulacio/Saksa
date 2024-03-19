@@ -103,14 +103,16 @@ const OurServices = () => {
               src="https://static.wixstatic.com/media/nsplsh_2a95c67e90b4478a856fc7d41736cbbe~mv2.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20Pedro%20Miranda.jpg"
               alt=""
             />
-            <h1 className="absolute inset-0 opacity-0  transition duration-700 text-white flex justify-center items-center text-2xl">
+            <h1 className="absolute inset-0 opacity-0 text-center transition duration-700 text-white flex justify-center items-center text-2xl">
               Conducción y Gerenciamiento de Obras
             </h1>
           </div>
           <div className="flex flex-wrap h-36 w-full justify-center items-start space-y-4">
-            <h1 className="text-center text-3xl font-bold text-gray-700">
-              Conducción y Gerenciamiento de Obras
-            </h1>
+            <div className="w-full flex justify-center">
+              <h1 className="w-full text-center text-3xl font-bold text-gray-700">
+                Gerenciamiento de Obras
+              </h1>
+            </div>
             <a
               href="/proyectos"
               className="bg-emerald-800 text-gray-100 py-2 px-3 rounded-md border-2 border-emerald-900 text-xl transform-translation hover:scale-110 duration-200"

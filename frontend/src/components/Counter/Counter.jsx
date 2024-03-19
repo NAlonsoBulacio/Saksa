@@ -38,13 +38,13 @@ const Counter = () => {
   return (
     <div className="w-full flex justify-center items-center"
     >
-      <div className="flex flex-wrap justify-center items-center px-10 notranslate text-center">
+      <div className="flex flex-wrap justify-center items-center px-10 notranslate text-center space-y-4 lg:space-y-0 ">
         <div className="w-full md:w-1/3 flex flex-wrap justify-center items-center">
           <div
             ref={ref1}
             className="w-full flex justify-center md:justify-center items-center"
           >
-            <p className="text-gray-700 font-bold w-32 md:w-40 text-6xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold w-32 md:w-40 text-5xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               +{count1}K
             </p>
           </div>
@@ -53,13 +53,13 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              }  text-gray-700 md:text-lg 2xl:text-2xl`}
+              }  text-emerald-700 md:text-lg 2xl:text-2xl`}
             >
               Metros cuadrados construidos.
             </h1>
           </div>
         </div>
-        <div className="w-full md:w-1/3 flex flex-wrap justify-center items-center border-l-2 border-green-600">
+        <div className="w-full md:w-1/3 flex flex-wrap justify-center items-center lg:border-l-2 border-green-600">
           <div
             ref={ref2}
             className="w-full flex justify-center items-center"
@@ -73,13 +73,13 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-gray-700 text-center md:text-lg 2xl:text-2xl`}
+              } text-emerald-700 text-center md:text-lg 2xl:text-2xl`}
             >
               Años De Trayectoria
             </h1>
           </div>
         </div>
-        <div className="w-full h-full md:w-1/3 flex flex-wrap justify-center items-center border-l-2 border-green-600">
+        <div className="w-full h-full md:w-1/3 flex flex-wrap justify-center items-center lg:border-l-2 border-green-600">
           <div
             ref={ref1}
             className="w-full h-2/3 flex justify-center md:justify-center items-center"
@@ -93,7 +93,7 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-gray-700 md:text-lg 2xl:text-2xl`}
+              } text-emerald-700 md:text-lg 2xl:text-2xl`}
             >
               Proyectos concluidos
             </h1>
