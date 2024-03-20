@@ -19,11 +19,12 @@ const DescriptionContact = () => {
         </div>
         <div className="w-full flex justify-start items-center text-left text-xl text-gray-600">
           <h1>
-            Te escucharemos encantados, cuéntanos sobre tu propuesta <br/> para asesorarte y darte un presupuesto adaptado a tus necesidades.
+            Te escucharemos encantados, cuéntanos sobre tu propuesta <br /> para
+            asesorarte y darte un presupuesto adaptado a tus necesidades.
           </h1>
         </div>
-        <div className="w-full flex justify-center items-start">
-        <ContactForm />
+        <div className="w-full lg:hidden flex justify-center items-start">
+          <ContactForm />
         </div>
         <div className="w-full flex justify-start ">
           <div className="w-1/5">

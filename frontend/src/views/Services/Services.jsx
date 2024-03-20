@@ -8,7 +8,7 @@ const Services = () => {
   return (
     <div>
       <FlyerAbout />
-      <div className="bg-gray-100 flex flex-wrap justify-center items-center px-2 lg:px-10 xl:px-32 space-y-8 py-10">
+      <div className="bg-gray-100 flex flex-wrap justify-center items-center px-2 lg:px-10 xl:px-32 space-y-16 py-10">
         <div className="w-full flex flex-wrap justify-center items-center  space-y-6">
           <h1 className="text-3xl lg:text-4xl tracking-[0.2rem] font-glacial-bold text-green-800">
             NUESTROS SERVICIOS
@@ -37,7 +37,7 @@ const Services = () => {
               PROYECTOS DE ARQUITECTURA
             </h1>
             <img
-              className="w-full object-cover object-center"
+              className="lg:hidden w-full object-cover object-center"
               src="https://static.wixstatic.com/media/d9faadd5288644d8b9bb8a53d6a17e6c.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Plan%20de%20la%20construcci%C3%B3n%20II.jpg"
               alt=""
             />
@@ -52,7 +52,7 @@ const Services = () => {
               DIRECCIÓN TÉCNICA
             </h1>
             <img
-              className="w-full object-cover object-center"
+              className="lg:hidden w-full object-cover object-center"
               src="https://static.wixstatic.com/media/nsplsh_347a776f7a517844624434~mv2_d_4981_3320_s_4_2.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20Guilherme%20%20Cunha.jpg"
               alt=""
             />
@@ -81,7 +81,7 @@ const Services = () => {
               CONDUCCIÓN Y GERENCIAMIENTO DE OBRAS
             </h1>
             <img
-              className="w-full object-cover object-center"
+              className="lg:hidden w-full object-cover object-center"
               src="https://static.wixstatic.com/media/nsplsh_2a95c67e90b4478a856fc7d41736cbbe~mv2.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20Pedro%20Miranda.jpg"
               alt=""
             />
