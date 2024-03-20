@@ -2,7 +2,7 @@ import React from "react";
 import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import img from "../../assets/sombra5c.png";
+import img from "../../assets/sombra.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";
 import OurServices from "../../components/OurServices/OurServices";
@@ -10,7 +10,7 @@ import ItemsHome from "../../components/ItemsHome/ItemsHome";
 const Home2 = () => {
   return (
     <div className="overflow-hidden ">
-      <div className="w-screen h-[37vh] lg:h-[63vh] xl:h-[78vh] overflow-hidden relative">
+      <div className="w-screen h-[37vh] lg:h-[63vh] xl:h-[58vh] overflow-hidden relative">
         <div
           className="absolute hidden lg:block inset-0 z-0"
           style={{

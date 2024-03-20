@@ -59,12 +59,13 @@ const Projects = () => {
   ];
 
   const options = [
-    { value: "todos", label: "Todos", type: 0 },
-    { value: "salud", label: "Salud", type: 1 },
+    { value: "todos", label: "TODOS", type: 0 },
+    { value: "salud", label: "SALUD/BIENESTAR", type: 1 },
     { value: "oficinas", label: "OFICINAS/COMERCIAL", type: 2 },
     { value: "viviendas", label: "VIVIENDAS UNIFAMILIARES", type: 2 },
     { value: "altura", label: "OBRAS EN ALTURA", type: 4 },
     { value: "otros", label: "OTROS PROYECTOS", type: 5 },
+    { value: "diseños", label: "DISEÑOS", type: 6 },
   ];
 
   const [projectsInView, setProjectsInView] = useState(projects);
@@ -139,7 +140,7 @@ const Projects = () => {
               } hover:text-emerald-800 hover:font-bold cursor-pointer`}
               onClick={() => filterProjects(1, "salud")}
             >
-              SALUD
+              SALUD/BIENESTAR
             </li>
             <li
               className={`${
@@ -179,12 +180,24 @@ const Projects = () => {
             >
               OTROS PROYECTOS
             </li>
+            <li
+              className={`${
+                filter === "diseños"
+                  ? "text-emerald-800 font-bold underline"
+                  : ""
+              } hover:text-emerald-800 hover:font-bold cursor-pointer`}
+              onClick={() => filterProjects(6, "diseños")}
+            >
+              DISEÑOS
+            </li>
           </ul>
         </div>
         <div>
           <ProjectsContainer projects={projectsInView} />
         </div>
-        <ContactUs />
+        <div className="py-6">
+          <ContactUs />
+        </div>
       </div>
 
       <NavBar />
