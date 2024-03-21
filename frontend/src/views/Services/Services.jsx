@@ -90,6 +90,28 @@ const Services = () => {
             </p>
           </div>
         </div>
+        <div className="flex flex-wrap justify-center items-start space-x-0 lg:space-x-8">
+          <div className="w-full lg:w-[30%] flex flex-wrap justify-start items-start px-0 lg:px-10 space-y-3 lg:space-y-0">
+            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-green-800">
+              ESTUDIOS PRELIMINARES
+            </h1>
+            <img
+              className="lg:hidden w-full object-cover object-center"
+              src="https://static.wixstatic.com/media/nsplsh_347a776f7a517844624434~mv2_d_4981_3320_s_4_2.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20Guilherme%20%20Cunha.jpg"
+              alt=""
+            />
+            <p className="text-lg text-gray-800">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in interdum risus. Mauris suscipit enim quis lacus aliquet, quis aliquam elit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent finibus semper massa sit amet faucibus. Sed dolor magna, viverra vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum, blandit ipsum non, ullamcorper mi.
+            </p>
+          </div>
+          <div className="w-full lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
+            <img
+              className="w-full object-cover object-center"
+              src="https://static.wixstatic.com/media/nsplsh_347a776f7a517844624434~mv2_d_4981_3320_s_4_2.jpg/v1/fill/w_656,h_368,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Image%20by%20Guilherme%20%20Cunha.jpg"
+              alt=""
+            />
+          </div>
+        </div>
         <ContactUs />
       </div>
 

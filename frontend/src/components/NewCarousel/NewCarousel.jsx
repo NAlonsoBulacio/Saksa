@@ -60,8 +60,12 @@ const CarouselSlider = () => {
           <h1 className="w-full font-raleway-700 text-5xl md:text-7xl text-left ">
             {selectedImage.text}
           </h1>
+          <a href="/proyectos" className="my-2">
+            <button className="border-2 border-white px-2 transform-transition hover:bg-emerald-800 hover:border-emerald-800 duration-300  text-xl">
+              Ver todas las propiedades
+            </button>
+          </a>
         </div>
-        <button>Ver todas las propiedades</button>
       </div>
     </div>
   );

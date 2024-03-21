@@ -14,7 +14,7 @@ const WhoAreWe = ({ img }) => {
         <div className="w-full lg:w-[47%] flex flex-wrap justify-center items-start text-left text-xl font-barlow-400 text-gray-800 px-0 lg:px-12 space-y-4">
           <div className="w-full">
             <h1 className="tracking-[0.3rem] text-gray-500 text-xl lg:text-2xl">
-              SAKSA ARQUITECTURA
+              SAKSA/ARQUITECTURA
             </h1>
           </div>
           <img

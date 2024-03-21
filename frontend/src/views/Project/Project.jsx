@@ -1,28 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
 import img from "../../assets/1.jpg";
 import img2 from "../../assets/4.jpg";
+
 const Project = () => {
   const images = [img, img2, img, img2];
+
+  const [fullScreen, setFullScreen] = useState(false);
+
+  const handleFullScreen = () => {
+    setFullScreen(!fullScreen);
+  };
+  console.log(fullScreen);
   return (
     <div>
       <FlyerAboutUs />
       <div className="w-full flex flex-wrap justify-start items-center py-20 px-0 lg:px-20 xl:px-32 space-y-8">
-        <div className="w-full flex justify-between items-center">
-          <h1 className="text-left text-5xl font-glacial-bold text-green-800 font-bold">
+        <div className="w-full flex justify-between items-center px-2">
+          <h1 className="text-left text-4xl lg:text-5xl  font-glacial-bold text-green-800 font-bold">
             Casa 1
           </h1>
-          <h1 className=""></h1>
         </div>
-        <div>
-          <Carousel images={images} />
+        <div className={`${fullScreen ? "w-screen " : ""} z-20`}>
+          <Carousel
+            handleFullScreen={handleFullScreen}
+            fullScreen={fullScreen}
+            images={images ? images : ""}
+          />
         </div>
-        <div className="w-full flex flex-wrap justify-start space-y-4 py-10">
+        <div className="w-full flex flex-wrap justify-start space-y-4 py-10 px-2">
           <div className="w-full">
-            <p className="text-left text-5xl font-glacial-bold text-green-800">
+            <p className="text-left text-3xl lg:text-5xl font-glacial-bold text-green-800">
               Detalles del Proyecto
             </p>
           </div>
@@ -59,6 +70,19 @@ const Project = () => {
           </div>
         </div>
       </div>
+      {fullScreen ? (
+        <div className="fixed inset-0 w-screen h-screen flex justify-center items-center bg-black z-10">
+          {/* <div className="w-[900px]">
+            <Carousel
+              handleFullScreen={handleFullScreen}
+              fullScreen={fullScreen}
+              images={images ? images : ""}
+            />
+          </div> */}
+        </div>
+      ) : (
+        ""
+      )}
       <NavBar />
       <Footer />
     </div>

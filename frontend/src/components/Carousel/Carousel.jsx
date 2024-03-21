@@ -1,7 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./Carousel.css";
 import { GrNext, GrPrevious } from "react-icons/gr";
-const MyCarousel = ({ images }) => {
+import { MdFullscreenExit } from "react-icons/md";
+import { MdFullscreen } from "react-icons/md";
+const MyCarousel = ({ images, fullScreen, handleFullScreen }) => {
   const listRef = useRef();
   const [currentIndex, setCurrentIndex] = useState([0]);
   const [marker, setMarker] = useState(0);
@@ -49,6 +51,7 @@ const MyCarousel = ({ images }) => {
     setMarker(newFirstIndex);
     setCurrentIndex([newFirstIndex]);
   };
+  console.log(fullScreen);
   return (
     <div className="flex w-full h-auto justify-center items-center relative overflow-hidden">
       <div className="carousel w-[100%] h-auto relative flex overflow-hidden">
@@ -74,7 +77,7 @@ const MyCarousel = ({ images }) => {
             style={{ zIndex: "4" }}
             onClick={() => previousArray()}
           >
-            <GrPrevious className="text-3xl"/>
+            <GrPrevious className="text-3xl" />
           </button>
         ) : (
           ""
@@ -86,6 +89,29 @@ const MyCarousel = ({ images }) => {
             onClick={() => nextArray()}
           >
             <GrNext className="text-3xl" />
+          </button>
+        ) : (
+          ""
+        )}
+
+        {fullScreen === true ? (
+          <button
+            className="absolute right-4 bottom-2 transform -translate-y-1/2 flex justify-center items-center text-gray-700 text-xl bg-gray-300 bg-opacity-[0.3] hover:bg-opacity-[0.9] rounded-xl h-12 w-12"
+            style={{ zIndex: "10" }}
+            onClick={() => handleFullScreen()}
+          >
+            <MdFullscreenExit className="text-black text-6xl" />
+          </button>
+        ) : (
+          ""
+        )}
+        {fullScreen === false ? (
+          <button
+          className="absolute right-4 bottom-2 transform -translate-y-1/2 flex justify-center items-center text-gray-700 text-xl bg-gray-300 bg-opacity-[0.3] hover:bg-opacity-[0.9] rounded-xl h-12 w-12"
+            style={{ zIndex: "10" }}
+            onClick={() => handleFullScreen()}
+          >
+            <MdFullscreen className="text-black text-6xl" />
           </button>
         ) : (
           ""

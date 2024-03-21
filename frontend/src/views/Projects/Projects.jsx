@@ -95,7 +95,7 @@ const Projects = () => {
     <div>
       <FlyerAboutUs />
       <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-14 space-y-4">
-        <h1 className="w-full text-center font-semibold text-5xl text-green-800 tracking-[0.2rem] my-4">
+        <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-green-800 tracking-[0.2rem] my-4">
           PROYECTOS
         </h1>
         <div className="w-full flex justify-center ">

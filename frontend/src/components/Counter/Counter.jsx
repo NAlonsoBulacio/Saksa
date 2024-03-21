@@ -38,22 +38,22 @@ const Counter = () => {
   return (
     <div className="w-full flex justify-center items-center"
     >
-      <div className="flex flex-wrap justify-center items-center px-10 notranslate text-center space-y-4 lg:space-y-0 ">
+      <div className="flex flex-wrap justify-center items-center px-0 lg:px-10 notranslate text-center space-y-4 lg:space-y-0 ">
         <div className="w-full md:w-1/3 flex flex-wrap justify-center items-center">
           <div
             ref={ref1}
-            className="w-full flex justify-center md:justify-center items-center"
+            className="w-full flex justify-start lg:justify-center md:justify-center items-center"
           >
-            <p className="text-gray-700 font-bold w-32 md:w-40 text-5xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               +{count1}K
             </p>
           </div>
-          <div className="w-full flex justify-center md:justify-center px-6">
+          <div className="w-full flex justify-start lg:justify-center px-0 lg:px-6">
             <h1
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              }  text-emerald-700 md:text-lg 2xl:text-2xl`}
+              }  text-emerald-700 text-xl 2xl:text-2xl`}
             >
               Metros cuadrados construidos.
             </h1>
@@ -62,9 +62,9 @@ const Counter = () => {
         <div className="w-full md:w-1/3 flex flex-wrap justify-center items-center lg:border-l-2 border-green-600">
           <div
             ref={ref2}
-            className="w-full flex justify-center items-center"
+            className="w-full flex justify-center lg:justify-center items-center"
           >
-            <p className="text-gray-700 font-bold text-center w-32 md:w-40 text-5xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold text-center w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               {count2}
             </p>
           </div>
@@ -73,7 +73,7 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-emerald-700 text-center md:text-lg 2xl:text-2xl`}
+              } text-emerald-700 text-center text-xl 2xl:text-2xl`}
             >
               Años De Trayectoria
             </h1>
@@ -82,18 +82,18 @@ const Counter = () => {
         <div className="w-full h-full md:w-1/3 flex flex-wrap justify-center items-center lg:border-l-2 border-green-600">
           <div
             ref={ref1}
-            className="w-full h-2/3 flex justify-center md:justify-center items-center"
+            className="w-full h-2/3 flex justify-end lg:justify-center items-center"
           >
-            <p className="text-gray-700 font-bold  w-32 md:w-40 text-5xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold  w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               +45
             </p>
           </div>
-          <div className="justify-center md:justify-center">
+          <div className="w-full justify-end lg:justify-center">
             <h1
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-emerald-700 md:text-lg 2xl:text-2xl`}
+              } text-emerald-700 text-xl 2xl:text-2xl text-right lg:text-center`}
             >
               Proyectos concluidos
             </h1>
