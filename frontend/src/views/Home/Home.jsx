@@ -2,7 +2,8 @@ import React from "react";
 import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import img from "../../assets/home3.png";
+import img from "../../assets/home.png";
+import img2 from "../../assets/home2.png";
 // import logo from "../../assets/logo.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";
@@ -25,7 +26,7 @@ const Home = () => {
         <div
           className="absolute block lg:hidden inset-0 z-0"
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${img2})`,
             backgroundSize: "cover",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
