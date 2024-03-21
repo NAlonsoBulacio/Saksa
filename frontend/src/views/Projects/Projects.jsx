@@ -94,10 +94,17 @@ const Projects = () => {
   return (
     <div>
       <FlyerAboutUs />
-      <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-14 space-y-4">
-        <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-green-800 tracking-[0.2rem] my-4">
-          PROYECTOS
-        </h1>
+      <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-2 lg:py-14 space-y-4">
+        <div className="w-full flex flex-wrap justify-center items-center space-y-2 lg:space-y-4 py-6">
+          <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-green-800 tracking-[0.2rem]">
+            PROYECTOS
+          </h1>
+          <div className="w-full flex justify-center ">
+            <div className="w-1/5">
+              <hr className=" border-[1.5px] border-green-800" />
+            </div>
+          </div>
+        </div>
         <div className="w-full flex justify-center ">
           <div className="flex w-full lg:hidden">
             <label

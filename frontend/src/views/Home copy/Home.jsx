@@ -30,9 +30,7 @@ const Home2 = () => {
           }}
         ></div>
       </div>
-      <div
-        className="flex flex-wrap justify-center items-center bg-gray-100 space-y-8 lg:space-y-14 py-8 lg:py-16 px-4 lg:px-10 xl:px-20"
-      >
+      <div className="flex flex-wrap justify-center items-center bg-gray-100 space-y-8 lg:space-y-14 py-8 lg:py-16 px-4 lg:px-10 xl:px-20">
         <div className="w-full flex justify-center items-center px-0 lg:px-10 ">
           <h1 className="font-lato-700 text-2xl lg:text-5xl text-center text-emerald-800">
             Somos un estudio con 30 años de trayectoria de labor profesional en

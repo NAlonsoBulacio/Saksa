@@ -11,10 +11,10 @@ const WhoAreWe = ({ img }) => {
             className="h-full object-cover object-center "
           />
         </div>
-        <div className="w-full lg:w-[47%] flex flex-wrap justify-center items-start text-left text-xl font-barlow-400 text-gray-800 px-0 lg:px-12 space-y-4">
+        <div className="w-full lg:w-[47%] flex flex-wrap justify-center items-start text-center lg:text-left text-xl font-barlow-400 text-gray-800 px-0 lg:px-12 space-y-4">
           <div className="w-full">
-            <h1 className="tracking-[0.3rem] text-gray-500 text-xl lg:text-2xl">
-              SAKSA/ARQUITECTURA
+            <h1 className="tracking-[0.3rem] text-gray-500 text-2xl lg:text-4xl">
+              saksa/arquitectura
             </h1>
           </div>
           <img
@@ -35,13 +35,13 @@ const WhoAreWe = ({ img }) => {
             </p>
           </div>
 
-          <div className="w-full">
+          <div className="text-left w-full">
             <p>
               Realiza específicamente Proyectos de Arquitectura, Dirección
               Técnica, Conducción y Gerenciamiento de Obras.
             </p>
           </div>
-          <div className="w-full">
+          <div className="text-left w-full">
             <p>
               Contando con experiencia en Arquitectura Comercial, Habitacional,
               para la Salud y la Administración.

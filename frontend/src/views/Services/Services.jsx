@@ -10,9 +10,14 @@ const Services = () => {
       <FlyerAbout />
       <div className="bg-gray-100 flex flex-wrap justify-center items-center px-2 lg:px-10 xl:px-32 space-y-16 py-10">
         <div className="w-full flex flex-wrap justify-center items-center  space-y-6">
-          <h1 className="text-3xl lg:text-4xl tracking-[0.2rem] font-glacial-bold text-green-800">
+          <h1 className="text-3xl lg:text-5xl tracking-[0.2rem] font-glacial-bold text-green-800 text-center">
             NUESTROS SERVICIOS
           </h1>
+          <div className="w-full flex justify-center ">
+            <div className="w-1/5">
+              <hr className=" border-[1.5px] border-green-800" />
+            </div>
+          </div>
           <p className="w-full px-0 lg:px-16 text-lg lg:text-xl text-left lg:text-center text-gray-800">
             Contando con experiencia en Arquitectura Comercial, Habitacional,
             para la Salud y la Administración. Con mas de 40 años de trayectoria
@@ -42,7 +47,13 @@ const Services = () => {
               alt=""
             />
             <p className="text-lg text-gray-800">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in interdum risus. Mauris suscipit enim quis lacus aliquet, quis aliquam elit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent finibus semper massa sit amet faucibus. Sed dolor magna, viverra vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum, blandit ipsum non, ullamcorper mi. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in interdum risus. Mauris suscipit enim quis lacus aliquet, quis
+              aliquam elit rhoncus. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Praesent
+              finibus semper massa sit amet faucibus. Sed dolor magna, viverra
+              vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum,
+              blandit ipsum non, ullamcorper mi.
             </p>
           </div>
         </div>
@@ -57,7 +68,13 @@ const Services = () => {
               alt=""
             />
             <p className="text-lg text-gray-800">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in interdum risus. Mauris suscipit enim quis lacus aliquet, quis aliquam elit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent finibus semper massa sit amet faucibus. Sed dolor magna, viverra vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum, blandit ipsum non, ullamcorper mi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in interdum risus. Mauris suscipit enim quis lacus aliquet, quis
+              aliquam elit rhoncus. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Praesent
+              finibus semper massa sit amet faucibus. Sed dolor magna, viverra
+              vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum,
+              blandit ipsum non, ullamcorper mi.
             </p>
           </div>
           <div className="w-full lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
@@ -86,7 +103,13 @@ const Services = () => {
               alt=""
             />
             <p className="text-lg text-gray-800">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in interdum risus. Mauris suscipit enim quis lacus aliquet, quis aliquam elit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent finibus semper massa sit amet faucibus. Sed dolor magna, viverra vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum, blandit ipsum non, ullamcorper mi. 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in interdum risus. Mauris suscipit enim quis lacus aliquet, quis
+              aliquam elit rhoncus. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Praesent
+              finibus semper massa sit amet faucibus. Sed dolor magna, viverra
+              vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum,
+              blandit ipsum non, ullamcorper mi.
             </p>
           </div>
         </div>
@@ -101,7 +124,13 @@ const Services = () => {
               alt=""
             />
             <p className="text-lg text-gray-800">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in interdum risus. Mauris suscipit enim quis lacus aliquet, quis aliquam elit rhoncus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent finibus semper massa sit amet faucibus. Sed dolor magna, viverra vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum, blandit ipsum non, ullamcorper mi.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              in interdum risus. Mauris suscipit enim quis lacus aliquet, quis
+              aliquam elit rhoncus. Pellentesque habitant morbi tristique
+              senectus et netus et malesuada fames ac turpis egestas. Praesent
+              finibus semper massa sit amet faucibus. Sed dolor magna, viverra
+              vel leo quis, ornare fringilla lacus. In faucibus urna vestibulum,
+              blandit ipsum non, ullamcorper mi.
             </p>
           </div>
           <div className="w-full lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">

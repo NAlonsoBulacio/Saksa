@@ -13,19 +13,16 @@ const Proveedores = () => {
   ];
 
   return (
-    <div className="flex flex-wrap justify-center items-center py-20">
+    <div className="flex flex-wrap justify-center items-center py-6 lg:py-12">
       <div className="w-full flex justify-center items-center ">
-        <h1 className="text-gray-800 text-center lg:text-left text-xl lg:text-2xl font-barlow-400 tracking-[0.3rem]">REFERENTES COMERCIALES </h1>
-      </div>
-      <div className="w-full flex justify-center ">
-            <div className="w-1/5">
-              <hr className="my-2 border-[1.5px] border-emerald-600" />
-            </div>
-          </div>
-      {/* <div className="w-full flex justify-center items-center">
-        <h1 className="w-2/3 text-5xl font-barlow-400 text-center">
-          Hemos ayudado a decenas de empresas a lograr sus objetivos
+        <h1 className="text-gray-800 text-center lg:text-left text-xl lg:text-2xl font-barlow-400 tracking-[0.3rem]">
+          REFERENTES COMERCIALES{" "}
         </h1>
+      </div>
+      {/* <div className="w-full flex justify-center ">
+        <div className="w-1/5">
+          <hr className="my-2 border-[1.5px] border-emerald-600" />
+        </div>
       </div> */}
       <ul className="flex flex-wrap justify-center items-center py-4 px-0 lg:px-0 xl:px-20 space-x-8">
         {clients?.map((client, index) => (
