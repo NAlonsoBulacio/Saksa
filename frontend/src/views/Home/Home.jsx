@@ -3,7 +3,7 @@ import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import img from "../../assets/home.png";
-import img3 from "../../assets/textura2.jpg";
+import img3 from "../../assets/textura4.png";
 import img2 from "../../assets/home4.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";

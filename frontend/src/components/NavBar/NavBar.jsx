@@ -68,7 +68,7 @@ const NavBar = ({ home }) => {
             viewPast100vh === true
               ? "bg-black text-gray-800 text-5xl"
               : "text-emerald-800"
-          } hidden lg:flex justify-center text-xl items-center space-x-20  text-gray-800 py-2 px-4 rounded-md border-2 border-gray-700`}
+          } hidden lg:flex justify-center text-xl items-center space-x-20  text-gray-800 py-2 px-10 rounded-md border-2 border-gray-700`}
           style={{
             backgroundColor: viewPast100vh
               ? "rgb(6 95 70)"
