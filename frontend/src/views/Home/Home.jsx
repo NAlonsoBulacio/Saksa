@@ -17,7 +17,6 @@ const Home = () => {
   const homeRef = useRef(null);
 
   const handleClick = () => {
-    // Hacer scroll hacia la sección home
     if (homeRef.current) {
       homeRef.current.scrollIntoView({ behavior: "smooth" });
     }
@@ -45,11 +44,9 @@ const Home = () => {
           style={{
             backgroundImage: `url(${img2})`,
             backgroundSize: "cover",
-            // backgroundRepeat: "no-repeat",
-            // backgroundAttachment: "fixed",
           }}
         ></div>
-        <div className="absolute right-10 lg:right-24 bottom-32 lg:bottom-16">
+        <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16">
           <a onClick={() => handleClick()}>
             <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200" />
           </a>
@@ -59,7 +56,6 @@ const Home = () => {
         style={{
           backgroundImage: `url(${img3})`,
           backgroundSize: "cover",
-          // backgroundRepeat: "no-repeat",
           backgroundAttachment: "fixed",
         }}
       >

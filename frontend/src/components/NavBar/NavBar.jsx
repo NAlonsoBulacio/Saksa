@@ -49,19 +49,22 @@ const NavBar = ({ home }) => {
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" />
       )}
-      <div className="flex lg:hidden w-screen justify-center text-xl items-center space-x-6 bg-emerald-900 text-gray-300 py-4 px-4 rounded-md border-2 border-emerald-700">
+      { viewPast100vh ? 
+      <div className="flex lg:hidden w-screen justify-center text-xl items-center space-x-6 bg-emerald-900 text-gray-300 py-2 px-6 rounded-md border-2 border-emerald-700">
         <div className="w-1/2 flex items-center">
           <a href="/">
-            <img className="w-[140px]" src={logo} alt="Logo" />
+            <img className="w-[100px]" src={logo} alt="Logo" />
           </a>
         </div>
         <button
           className="w-1/2 flex justify-center items-center pl-20"
           onClick={handleMenuToggle}
         >
-          <IoMenu className="text-gray-400 w-16 h-16 " width={64} />
+          <IoMenu className="w-16 h-16 " width={64} 
+          style={{ color: "#888c8c"}}
+          />
         </button>
-      </div>
+      </div> : ""}
       {home ? (
         <ul
           className={`${

@@ -5,13 +5,11 @@ import AboutUs from "./views/AboutUs/AboutUs";
 import Services from "./views/Services/Services";
 import Porjects from "./views/Projects/Projects";
 import Project from "./views/Project/Project";
-import Home2 from "./views/Home copy/Home";
 import "./App.css"
 function App() {
   return (
     <div className="font-glacial">
       <Route exact path="/" component={Home} />
-      <Route exact path="/home-prueba" component={Home2} />
       <Route exact path="/contacto" component={Contact} />
       <Route exact path="/proyectos" component={Porjects} />
       <Route exact path="/servicios" component={Services} />
