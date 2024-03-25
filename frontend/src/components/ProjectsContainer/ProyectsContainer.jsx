@@ -35,7 +35,7 @@ const ProjectsContainer = ({ projects }) => {
         <div className="w-full columns-1 gap-4 lg:gap-4 sm:columns-2 lg:columns-3 [&>div:not(:first-child)]:mt-5 lg:[&>div:not(:first-child)]:mt-6">
           {localProjects?.map((project, index) => (
             <div>
-            <a href="/proyecto/1">
+            <a href={`/proyecto/${project.id}`}>
               <div
                 className={`w-auto h-auto border-2 border-gray-400 rounded-xl relative overflow-hidden cursor-pointer transition-opacity duration-500 ${
                   isTransitioning ? "opacity-0" : "opacity-100"

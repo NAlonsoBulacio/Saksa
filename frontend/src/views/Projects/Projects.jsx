@@ -1,75 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
 import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import ProjectsContainer from "../../components/ProjectsContainer/ProyectsContainer";
 import ContactUs from "../../components/ContactUs/ContactUs";
+import {useDispatch, useSelector } from "react-redux";
+import { getProjects } from "../../redux/actions";
 const Projects = () => {
-  const projects = [
-    {
-      img: "https://studiopractica.com/wp-content/uploads/2022/06/PRACTICA_ATICO-EN-CHAMBERI_01-801x1200.jpg",
-      type: 3,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://studiopractica.com/wp-content/uploads/2022/06/PRACTICA_ATICO-EN-CHAMBERI_04_2000px-1200x800.jpg",
-      type: 1,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://studiopractica.com/wp-content/uploads/2018/09/PRACTICA_PRIVATE_RESIDENCE_IN_SHOREDITCH_KITCHEN_2-1200x800.jpg",
-      type: 2,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://studiopractica.com/wp-content/uploads/2018/09/PRACTICA_PRIVATE_RESIDENCE_IN_SHOREDITCH_LIVING_2-1200x800.jpg",
-      type: 3,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2022/10/Behind-Pictures_Ca-Na-Grisa-_Camera-02_Post-1-2048x1152.jpg",
-      type: 1,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2023/09/QUANTUM-TRIBECA-9_00001-1843x2048.jpg",
-      type: 4,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2023/09/QUANTUM-TRIBECA-178_00000-2048x1152.jpg",
-      type: 4,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2023/09/QUANTUM-TRIBECA-9_00000-1.jpg",
-      type: 1,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2022/10/Behind-Pictures_Ca-Na-Grisa-_Camera-05_piscina-2048x1152.jpg",
-      type: 5,
-      name: "Casa Uno",
-    },
-    {
-      img: "https://behindpictures.com/wp-content/uploads/2023/09/QUANTUM-TRIBECA-9_00001-1843x2048.jpg",
-      type: 5,
-      name: "Casa Uno",
-    },
-  ];
+  const [projectsInView, setProjectsInView] = useState([]);
+  const [filter, setFilter] = useState("todos");
+  const projects = useSelector((state) => state.projects);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProjects());
+  }, [dispatch]);
+
+  useEffect(() => {
+    setProjectsInView(projects);
+  }, [projects]);
 
   const options = [
     { value: "todos", label: "TODOS", type: 0 },
     { value: "salud", label: "SALUD/BIENESTAR", type: 1 },
     { value: "oficinas", label: "OFICINAS/COMERCIAL", type: 2 },
-    { value: "viviendas", label: "VIVIENDAS UNIFAMILIARES", type: 2 },
+    { value: "viviendas", label: "VIVIENDAS UNIFAMILIARES", type: 3 },
     { value: "altura", label: "OBRAS EN ALTURA", type: 4 },
     { value: "otros", label: "OTROS PROYECTOS", type: 5 },
     { value: "diseños", label: "DISEÑOS", type: 6 },
   ];
 
-  const [projectsInView, setProjectsInView] = useState(projects);
-  const [filter, setFilter] = useState("todos");
 
   const filterProjects = (filter, type) => {
     if (filter && filter !== 0) {
@@ -93,6 +52,7 @@ const Projects = () => {
 
   return (
     <div>
+      
       <FlyerAboutUs />
       <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-2 lg:py-14 space-y-4">
         <div className="w-full flex flex-wrap justify-center items-center space-y-2 lg:space-y-4 py-6">
@@ -206,7 +166,6 @@ const Projects = () => {
           <ContactUs />
         </div>
       </div>
-
       <NavBar />
       <Footer />
     </div>

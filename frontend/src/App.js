@@ -6,6 +6,7 @@ import Services from "./views/Services/Services";
 import Porjects from "./views/Projects/Projects";
 import Project from "./views/Project/Project";
 import Home2 from "./views/Home copy/Home";
+import "./App.css"
 function App() {
   return (
     <div className="font-glacial">
