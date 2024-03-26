@@ -48,7 +48,7 @@ const Home = () => {
         ></div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16">
           <a onClick={() => handleClick()}>
-            <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200" />
+            <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-300 lg:text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200" />
           </a>
         </div>
       </div>
