@@ -65,10 +65,10 @@ const Home = () => {
       </div>
       <div
         style={{
-          // backgroundColor: "#545454"
-          backgroundImage: `url(${img3})`,
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
+          backgroundColor: "#545454"
+          // backgroundImage: `url(${img3})`,
+          // backgroundSize: "cover",
+          // backgroundAttachment: "fixed",
         }}
       >
         <div

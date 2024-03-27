@@ -28,7 +28,6 @@ const Project = ({ match }) => {
     setFullScreen(!fullScreen);
   };
   const images = [detail ? detail.img : ""];
-console.log(images);
   return (
     <>
       {detail ? (

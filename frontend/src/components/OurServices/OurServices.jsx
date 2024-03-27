@@ -4,12 +4,12 @@ const OurServices = () => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center space-y-6 py-4 lg:py-12">
       <div className="w-full flex flex-wrap justify-center items-center space-y-3">
-        <h1 className="w-full text-center text-3xl lg:text-4xl font-glacial-bold tracking-[0.2rem] text-green-800">
+        <h1 className="w-full text-center text-3xl lg:text-4xl font-glacial-bold tracking-[0.2rem] text-green-600">
           NUESTROS SERVICIOS
         </h1>
         <div className="w-full flex justify-center ">
           <div className="w-1/5">
-            <hr className=" border-[1.5px] border-green-800" />
+            <hr className=" border-[1.5px] border-green-700" />
           </div>
         </div>
       </div>
@@ -21,7 +21,7 @@ const OurServices = () => {
           >
             <div className="flex flex-wrap w-full justify-start items-start ">
               <div className="w-full flex justify-start">
-                <h1 className="text-center text-2xl lg:text-3xl font-bold text-gray-600">
+                <h1 className="text-center text-2xl lg:text-3xl font-bold text-gray-300">
                   - Proyectos de Arquitectura
                 </h1>
               </div>
@@ -30,7 +30,7 @@ const OurServices = () => {
           <div className="w-full flex flex-wrap justify-start items-start h-auto ">
             <div className="flex flex-wrap w-full justify-start items-start">
               <a href="/proyectos">
-                <h1 className="text-left text-2xl lg:text-3xl font-bold text-gray-600">
+                <h1 className="text-left text-2xl lg:text-3xl font-bold text-gray-300">
                   - Dirección Técnica
                 </h1>
               </a>
@@ -39,7 +39,7 @@ const OurServices = () => {
           <div className="w-full flex flex-wrap justify-start items-start h-auto ">
             <div className="flex flex-wrap w-full justify-start items-start ">
               <a href="/proyectos" className="w-auto flex justify-start">
-                <h1 className="text-left  text-2xl lg:text-3xl font-bold text-gray-600">
+                <h1 className="text-left  text-2xl lg:text-3xl font-bold text-gray-300">
                   - Estudios Preliminares
                 </h1>
               </a>
@@ -47,7 +47,7 @@ const OurServices = () => {
           </div>
           <div className="flex flex-wrap w-full justify-start items-start ">
             <a href="/proyectos" className="w-auto flex justify-start">
-              <h1 className="w-full text-left  text-2xl lg:text-3xl font-bold text-gray-600">
+              <h1 className="w-full text-left  text-2xl lg:text-3xl font-bold text-gray-300">
                 - Gerenciamiento de Obras
               </h1>
             </a>
