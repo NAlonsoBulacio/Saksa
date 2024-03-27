@@ -3,6 +3,7 @@ import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
+import Carousel2 from "../../components/Carousel2/Carousel2";
 import img from "../../assets/1.jpg";
 import img2 from "../../assets/4.jpg";
 import { useDispatch, useSelector } from "react-redux";
@@ -27,6 +28,7 @@ const Project = ({ match }) => {
     setFullScreen(!fullScreen);
   };
   const images = [detail ? detail.img : ""];
+console.log(images);
   return (
     <>
       {detail ? (
@@ -39,14 +41,13 @@ const Project = ({ match }) => {
               </h1>
             </div>
             <div className={`${fullScreen ? "w-screen " : ""} z-20`}>
-              <Carousel
+              <Carousel2
                 handleFullScreen={handleFullScreen}
                 fullScreen={fullScreen}
                 images={images ? images : ""}
               />
             </div>
             <div className="w-full flex flex-wrap justify-start space-y-4 py-10 px-2">
-
               <div className="w-full flex justify-start ">
                 <div className="w-1/5">
                   <hr className="my-2 border-[1.5px] border-green-800" />

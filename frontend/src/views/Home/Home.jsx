@@ -46,14 +46,26 @@ const Home = () => {
             backgroundSize: "cover",
           }}
         ></div>
+        <div
+          className="absolute bottom-0 w-screen flex justify-center items-center px-2 lg:px-[178px] py-2 lg:py-8 pb-2 lg:pb-20"
+          style={{
+            backgroundColor: "rgba(75, 75, 75, 0.7)",
+          }}
+        >
+          <h1 className="font-lato-700 text-2xl lg:text-[40px] leading-10 text-gray-300 text-center">
+            Somos un estudio con 30 años de trayectoria de labor profesional en
+            Arquitectura, y más de 300.000 m2 construidos.
+          </h1>
+        </div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16">
           <a onClick={() => handleClick()}>
-            <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-300 lg:text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200" />
+            <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-300 lg:text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200 rotate-180" />
           </a>
         </div>
       </div>
       <div
         style={{
+          // backgroundColor: "#545454"
           backgroundImage: `url(${img3})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
@@ -64,12 +76,12 @@ const Home = () => {
           id="home"
           className="flex flex-wrap justify-center items-center  space-y-8 lg:space-y-10 py-8 lg:py-10 px-4 lg:px-10 xl:px-20"
         >
-          <div className="w-full flex justify-center items-center px-0 lg:px-10 ">
+          {/* <div className="w-full flex justify-center items-center px-0 lg:px-10 ">
             <h1 className="font-lato-700 text-3xl lg:text-5xl  text-emerald-800 text-center">
               Somos un estudio con 30 años de trayectoria de labor profesional
               en Arquitectura, y más de 300.000 m2 construidos.
             </h1>
-          </div>
+          </div> */}
           <OurServices />
           <Counter />
           <div className="w-full flex justify-center items-center py-2">
