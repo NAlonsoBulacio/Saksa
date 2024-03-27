@@ -1,15 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
-const Carousel2 = ({images}) => {
+const Carousel2 = ({ images }) => {
   const [curr, setCurr] = useState(0);
-//   const images = [
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044972/large_5_94d06566fe.jpg",
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044971/large_1_a1ecdd029f.jpg",
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044972/large_3_c7dadfcefc.jpg",
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044972/large_4_3141730435.jpg",
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044982/large_CEDYT_2_41c6b4bee7.png",
-//     "https://res.cloudinary.com/doczyujqf/image/upload/v1711044981/large_Portada_4d02726c69.png",
-//   ];
   const prev = () =>
     setCurr((curr) => (curr === 0 ? images.length - 1 : curr - 1));
   const next = () =>
@@ -20,13 +12,14 @@ const Carousel2 = ({images}) => {
   //   const slideInterval = setInterval(next, autoSlideInterval)
   //   return () => clearInterval(slideInterval)
   // }, [])
-
+  const numSlides = images?.length;
+  const containerWidth = numSlides * 100;
   return (
     <>
       {images ? (
         <div className="overflow-hidden relative">
           <div
-            className="flex transition-transform ease-out duration-500"
+            className={`w-${containerWidth}vw flex transition-transform ease-out duration-500`}
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {images
@@ -40,13 +33,13 @@ const Carousel2 = ({images}) => {
               onClick={prev}
               className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
             >
-              <FaChevronLeft size={40} />
+              <FaChevronLeft className="text-2xl lg:text-4xl" />
             </button>
             <button
               onClick={next}
               className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
             >
-              <FaChevronRight size={40} />
+              <FaChevronRight className="text-2xl lg:text-4xl" />
             </button>
           </div>
 

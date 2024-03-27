@@ -43,7 +43,7 @@ const Counter = () => {
             ref={ref2}
             className="w-full flex justify-center lg:justify-center items-start lg:items-center"
           >
-            <p className="text-gray-300 font-bold text-center w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold text-center w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               {count2}
             </p>
           </div>
@@ -52,7 +52,7 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-emerald-400 text-center text-lg lg:text-xl 2xl:text-2xl`}
+              } text-emerald-800 text-center text-lg lg:text-xl 2xl:text-2xl`}
             >
               Años De Trayectoria
             </h1>
@@ -63,7 +63,7 @@ const Counter = () => {
             ref={ref1}
             className="w-full h-2/3 flex justify-center lg:justify-center items-center"
           >
-            <p className="text-gray-300 font-bold text-center  w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold text-center  w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               +45
             </p>
           </div>
@@ -72,7 +72,7 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              } text-emerald-400 text-lg lg:text-xl 2xl:text-2xl text-center lg:text-center`}
+              } text-emerald-800 text-lg lg:text-xl 2xl:text-2xl text-center lg:text-center`}
             >
               Proyectos concluidos
             </h1>
@@ -83,7 +83,7 @@ const Counter = () => {
             ref={ref1}
             className="w-full flex justify-center lg:justify-center md:justify-center items-center"
           >
-            <p className="text-gray-300 font-bold w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
+            <p className="text-gray-700 font-bold w-32 md:w-40 text-7xl md:text-5xl lg:text-5xl xl:text-5xl 2xl:text-6xl">
               +{count1}K
             </p>
           </div>
@@ -92,7 +92,7 @@ const Counter = () => {
               ref={ref3}
               className={`${
                 inView3 ? "animatable-type" : "initial-type"
-              }  text-emerald-400 text-lg lg:text-xl 2xl:text-2xl text-center`}
+              }  text-emerald-800 text-lg lg:text-xl 2xl:text-2xl text-center`}
             >
               Metros cuadrados construidos.
             </h1>

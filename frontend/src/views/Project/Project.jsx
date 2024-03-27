@@ -24,10 +24,11 @@ const Project = ({ match }) => {
     };
   }, [dispatch]);
 
-  const handleFullScreen = () => {
+  const handleFullScreen  = () => {
     setFullScreen(!fullScreen);
   };
-  const images = [detail ? detail.img : ""];
+  const images = detail ? detail.img : "";
+  console.log(images);
   return (
     <>
       {detail ? (
@@ -39,7 +40,7 @@ const Project = ({ match }) => {
                 {detail.name}
               </h1>
             </div>
-            <div className={`${fullScreen ? "w-screen " : ""} z-20`}>
+            <div className={`${fullScreen ? "w-screen" : "w-full lg:w-[1100px]"} z-20 flex justify-center`}>
               <Carousel2
                 handleFullScreen={handleFullScreen}
                 fullScreen={fullScreen}

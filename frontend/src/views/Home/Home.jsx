@@ -1,10 +1,11 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import img from "../../assets/home.png";
-import img3 from "../../assets/textura4.png";
+import img from "../../assets/home5.png";
+import img3 from "../../assets/fondo.png";
 import img2 from "../../assets/home4.png";
+import logoNegro from "../../assets/logo-negro.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";
 import OurServices from "../../components/OurServices/OurServices";
@@ -15,7 +16,6 @@ import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 
 const Home = () => {
   const homeRef = useRef(null);
-
   const handleClick = () => {
     if (homeRef.current) {
       homeRef.current.scrollIntoView({ behavior: "smooth" });
@@ -40,6 +40,16 @@ const Home = () => {
           }}
         ></div>
         <div
+          className="absolute hidden lg:block inset-0 z-10"
+          style={{
+            backgroundImage: `url(${logoNegro})`,
+            backgroundSize: "12% 12%",
+            backgroundRepeat: "no-repeat",
+            backgroundAttachment: "fixed",
+            backgroundPosition: "top 4% left 3%",
+          }}
+        ></div>
+        <div
           className="absolute block lg:hidden inset-0 z-0"
           style={{
             backgroundImage: `url(${img2})`,
@@ -57,7 +67,7 @@ const Home = () => {
             Arquitectura, y más de 300.000 m2 construidos.
           </h1>
         </div>
-        <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16">
+        <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16 z-20">
           <a onClick={() => handleClick()}>
             <MdKeyboardDoubleArrowDown className="text-[78px] text-gray-300 lg:text-gray-400 cursor-pointer hover:text-gray-300 hover:scale-110 duration-200 rotate-180" />
           </a>
@@ -65,10 +75,9 @@ const Home = () => {
       </div>
       <div
         style={{
-          backgroundColor: "#545454"
-          // backgroundImage: `url(${img3})`,
-          // backgroundSize: "cover",
-          // backgroundAttachment: "fixed",
+          backgroundImage: `url(${img3})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
         }}
       >
         <div
