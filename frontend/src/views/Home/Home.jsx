@@ -34,7 +34,7 @@ const Home = () => {
           className="absolute hidden lg:block inset-0 z-0"
           style={{
             backgroundImage: `url(${img})`,
-            backgroundSize: "cover",
+            backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
           }}
