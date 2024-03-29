@@ -61,7 +61,7 @@ const NavBar = ({ home }) => {
             onClick={handleMenuToggle}
           >
             <IoMenu
-              className="w-16 h-16 "
+              className="w-16 h-16"
               width={64}
               style={{ color: "#888c8c" }}
             />
@@ -72,7 +72,7 @@ const NavBar = ({ home }) => {
       )}
       {home ? (
         <div
-          className="w-screen h-auto flex justify-center items-center"
+          className="hidden lg:flex w-screen h-auto justify-center items-center"
           style={{
             backgroundColor: viewPast100vh
               ? "rgba(6, 95, 70, 0.704)"

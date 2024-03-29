@@ -4,15 +4,15 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import img from "../../assets/1.jpg";
 import WhoAreWe from "../../components/WhoAreWe/WhoAreWe";
-import Slider from "../../components/Slider/Slider";
-import Clients from "../../components/Clients/Clients";
 import hormiga from "../../assets/hormiga-negra.png";
 import Ant from "../../components/Ant/Ant";
-import Proveedores from "../../components/Proveedores/Proveedores";
 import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import ItemsHome from "../../components/ItemsHome/ItemsHome";
 import perfil from "../../assets/perfil.png";
+import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
+import { logoClientes } from "../../assets/logosClientes";
+import { logoRef } from "../../assets/logosRefComerciales";
 const AboutUs = () => {
   return (
     <div className="">
@@ -23,9 +23,10 @@ const AboutUs = () => {
           <Ant hormiga={hormiga} />
           <img className="rounded-xl" src={perfil} alt="" />
         </div>
-        <div className="pb-20 space-y-12 pt-16 bg-gray-100">
+        <div className="pb-20 space-y-20 pt-16 bg-gray-100">
           <ItemsHome />
-          <Proveedores />
+          <LogoCarousel logos={logoClientes} title={"CONFIARON EN NOSOTROS"} />
+          <LogoCarousel logos={logoRef} title={"REFERENCIAS COMERCIALES"} />
           <ContactUs />
         </div>
       </div>
