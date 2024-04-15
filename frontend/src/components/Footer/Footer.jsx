@@ -9,7 +9,7 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
   return (
     <div
-      className="w-full flex flex-wrap justify-center items-center pt-6 mb-20 lg:mb-0 lg:py-6"
+      className="w-full flex flex-wrap justify-center items-center pt-6 pb-20 lg:mb-0 lg:py-6"
       style={{
         backgroundColor: "#0c6464 ",
         // backgroundImage: `url(${bg_image})`,
