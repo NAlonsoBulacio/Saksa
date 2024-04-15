@@ -34,7 +34,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="w-full flex justify-start items-center space-x-4">
-            <h1 className="text-gray-300 font-plus-500 text-left text-lg">Todos los derechos reservados.</h1>
+            <h1 className="text-gray-300 font-plus-500 text-left text-lg">© 2024 Saksa Arquitectura Todos los derechos reservados.   2024.</h1>
           </div>
         </div>
         <div className="w-full lg:w-[40%] flex flex-wrap justify-center items-center space-y-6">
