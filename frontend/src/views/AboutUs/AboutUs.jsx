@@ -30,7 +30,7 @@ const AboutUs = () => {
         <div>
           <WhoAreWe img={img} />
           <Ant hormiga={hormiga} />
-          <img className="rounded-xl" src={perfil} alt="" />
+          {/* <img className="rounded-xl" src={perfil} alt="" /> */}
         </div>
         <div className="pb-20 space-y-20 pt-16">
           <LogoCarousel logos={logoClientes} title={"Confiaron en nosotros:"} />
