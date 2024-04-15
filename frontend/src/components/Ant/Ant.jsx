@@ -11,7 +11,7 @@ const Ant = ({ hormiga }) => {
     <div className="flex flex-wrap justify-center items-start space-y-8 py-8">
       <div className="w-full flex flex-wrap justify-center items-start space-y-2 lg:space-y-4">
         <h1 className="w-full text-center text-3xl lg:text-5xl font-glacial-bold text-green-800">
-          NUESTRA MARCA
+          NUESTRA INSPIRACIÓN
         </h1>
 
       </div>
@@ -33,27 +33,15 @@ const Ant = ({ hormiga }) => {
           onClick={() => handleOpenDiv()}
         >
           <p className="w-full   ">
-            La imagen de la hormiga se fundamenta en varios aspectos simbólicos.
+          La imagen de la hormiga está llena de simbolismos que reflejan nuestra visión en el mundo de la arquitectura. Vemos las ciudades como parte de la naturaleza, como si fueran hormigueros gigantes, esta perspectiva nos recuerda que somos parte de un mundo más grande y nos motiva a construir de manera consciente, cuidando nuestro hogar natural.
+
           </p>
           <p className="w-full">
-            En primer lugar, la percepción de las ciudades como construcciones
-            naturales, similares a los hormigueros o madrigueras, sugiere que
-            los humanos somos constructores naturales, conscientes de nuestro
-            entorno como parte de un todo natural. Esta idea nos responsabiliza
-            de cuidar nuestro hábitat y nos conecta con la naturaleza.
+          El trabajo en equipo para la creación colectiva de algo más grande nos inspira. La capacidad de las hormigas para cargar varias veces su propio peso es un recordatorio del compromiso con el bien común. 
+
           </p>
           <p className="w-full">
-            Además, la labor colaborativa de las hormigas destaca la importancia
-            del trabajo en comunidad y la creación colectiva. Su organización y
-            eficiencia son símbolos de orden e inteligencia, mientras que su
-            capacidad para cargar varias veces su peso muestra su compromiso con
-            el bien común.
-          </p>
-          <p className="w-full">
-            Las hormigas también destacan por su impacto en el paisaje de manera
-            ecológica, siendo hábiles diseñadoras y constructoras. Esta dualidad
-            entre lo natural y lo artificial plantea una interesante dicotomía
-            en nuestra percepción del entorno.
+          Las hormigas también nos enseñan mucho sobre diseño ecológico. Son expertas en adaptarse al entorno y construir de manera sostenible. Esta dualidad entre lo natural y lo artificial nos desafía a pensar en cómo nuestras obras pueden integrarse armoniosamente en el paisaje.
           </p>
         </div>
         <div

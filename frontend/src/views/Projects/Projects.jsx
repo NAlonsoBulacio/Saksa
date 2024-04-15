@@ -6,18 +6,34 @@ import ProjectsContainer from "../../components/ProjectsContainer/ProyectsContai
 import ContactUs from "../../components/ContactUs/ContactUs";
 import {useDispatch, useSelector } from "react-redux";
 import { getProjects } from "../../redux/actions";
+import { useLocation } from 'react-router-dom';
+import img3 from "../../assets/fondo.png";
+
 const Projects = () => {
   const [projectsInView, setProjectsInView] = useState([]);
   const [filter, setFilter] = useState("todos");
   const projects = useSelector((state) => state.projects);
   const dispatch = useDispatch();
+  const location = useLocation();
+  const stateFromURL = location.state;
   useEffect(() => {
     dispatch(getProjects());
   }, [dispatch]);
 
   useEffect(() => {
-    setProjectsInView(projects);
-  }, [projects]);
+    console.log(stateFromURL);
+    if(stateFromURL){
+      const filterState = stateFromURL.type
+      const filteredProjectsType = projects?.filter(
+        (project) => project.type === filterState
+      );
+      setProjectsInView(filteredProjectsType);
+      setFilter(stateFromURL.value);
+    }else{
+      setProjectsInView(projects);
+    }
+   
+  }, [stateFromURL, projects]);
 
   const options = [
     { value: "todos", label: "TODOS", type: 0 },
@@ -52,9 +68,14 @@ const Projects = () => {
 
   return (
     <div>
-      
       <FlyerAboutUs />
-      <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-2 lg:py-14 space-y-4">
+      <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-2 lg:py-14 space-y-4"
+              style={{
+                backgroundImage: `url(${img3})`,
+                backgroundSize: "cover",
+                backgroundAttachment: "fixed",
+              }}
+      >
         <div className="w-full flex flex-wrap justify-center items-center space-y-2 lg:space-y-4 py-6">
           <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-green-800 tracking-[0.2rem]">
             PROYECTOS

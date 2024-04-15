@@ -1,5 +1,5 @@
 import React from "react";
-
+import servicesImage from "../../assets/images/image4.png";
 const OurServices = () => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center space-y-6 py-4 lg:py-12">
@@ -61,8 +61,8 @@ const OurServices = () => {
         </div>
         <div className="hidden w-1/2  lg:flex justify-center items-start">
           <img
-            className="h-[500px]"
-            src="https://behindpictures.com/wp-content/uploads/2023/09/QUANTUM-TRIBECA-9_00000-1.jpg"
+            className="h-auto"
+            src={servicesImage}
             alt=""
           />
         </div>

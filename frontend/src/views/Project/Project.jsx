@@ -5,9 +5,11 @@ import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
 import Carousel2 from "../../components/Carousel2/Carousel2";
 import img from "../../assets/1.jpg";
-import img2 from "../../assets/4.jpg";
+import img3 from "../../assets/fondo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectId, emptyDetail } from "../../redux/actions";
+import { MdOutlineArrowRightAlt } from "react-icons/md";
+
 const Project = ({ match }) => {
   const projectId = match.params.id;
   const [fullScreen, setFullScreen] = useState(false);
@@ -24,7 +26,7 @@ const Project = ({ match }) => {
     };
   }, [dispatch]);
 
-  const handleFullScreen  = () => {
+  const handleFullScreen = () => {
     setFullScreen(!fullScreen);
   };
   const images = detail ? detail.img : "";
@@ -32,15 +34,41 @@ const Project = ({ match }) => {
   return (
     <>
       {detail ? (
-        <div>
+        <div
+        style={{
+          backgroundImage: `url(${img3})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+        >
           <FlyerAboutUs />
-          <div className="w-full flex flex-wrap justify-start items-center py-20 px-0 lg:px-20 xl:px-32 space-y-8">
+          <div
+            className="flex justify-start items-start space-x-3  px-0 lg:px-20  xl:px-32 pt-20 pb-8 text-xl text-gray-700"
+
+          >
+            <a className="hover:underline" href="/">
+              Inicio
+            </a>
+            <span className="arrow">→</span>
+            <a className="hover:underline" href="/proyectos">
+              Proyectos
+            </a>
+            <span className="arrow">→</span>
+            <a href="" className="underline ">
+              {detail.name}
+            </a>
+          </div>
+          <div className="w-full flex flex-wrap justify-start items-center pb-20 px-0 lg:px-20 xl:px-32 space-y-8">
             <div className="w-full flex justify-between items-center px-2">
               <h1 className="text-left text-3xl lg:text-5xl  font-glacial-bold text-green-800 font-bold">
                 {detail.name}
               </h1>
             </div>
-            <div className={`${fullScreen ? "w-screen" : "w-full lg:w-[1100px]"} z-20 flex justify-center`}>
+            <div
+              className={`${
+                fullScreen ? "w-screen" : "w-full lg:w-[1100px]"
+              } z-20 flex justify-center`}
+            >
               <Carousel2
                 handleFullScreen={handleFullScreen}
                 fullScreen={fullScreen}

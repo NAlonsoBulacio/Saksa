@@ -28,7 +28,7 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div className="overflow-hidden ">
+    <div className="overflow-hidden">
       <div className="w-screen h-[100vh] lg:h-[100vh] xl:h-[100vh] overflow-hidden relative">
         <div
           className="absolute hidden lg:block inset-0 z-0"
@@ -63,8 +63,7 @@ const Home = () => {
           }}
         >
           <h1 className="font-lato-700 text-2xl lg:text-[40px] leading-10 text-gray-300 text-center">
-            Somos un estudio con 30 años de trayectoria de labor profesional en
-            Arquitectura, y más de 300.000 m2 construidos.
+          Buscamos pensar para emocionar con los ámbitos para la vida
           </h1>
         </div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16 z-20">
@@ -92,14 +91,14 @@ const Home = () => {
             </h1>
           </div> */}
           <OurServices />
-          <Counter />
-          <div className="w-full flex justify-center items-center py-2">
+          {/* <Counter /> */}
+          {/* <div className="w-full flex justify-center items-center py-2">
             <a href="/contacto">
               <button className="text-2xl text-gray-200 px-4 py-2 font-barlow-400 rounded-md bg-emerald-800 transform-transition hover:scale-110 duration-200">
                 Contáctanos
               </button>
             </a>
-          </div>
+          </div> */}
         </div>
         <NewCarousel />
         <div className="py-14 space-y-20 px-2 lg:px-10 xl:px-20">

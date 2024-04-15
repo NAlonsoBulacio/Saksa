@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 import MenuPhone from "../../components/MenuPhone/MenuPhone";
+import { projectsType } from '../../constants/index';
 import "./NavBar.css";
 const NavBar = ({ home }) => {
   const [currentPage, setCurrentPage] = useState("/");
   const location = useLocation();
+  const history = useHistory();
   const currentPath = location.pathname;
   const [menuOpen, setMenuOpen] = useState(false);
   const [viewPast100vh, setViewPast100vh] = useState(false);
+  const [projetsHover, setProjetsHover] = useState(false);
 
   const element = home ? (
     <div>Elemento para la página de inicio</div>
@@ -44,13 +47,22 @@ const NavBar = ({ home }) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleTypeClick = (type) => {
+    history.push('/proyectos', type);
+  };
+
+  const handleProjectsHover = () => {
+    setProjetsHover(!projetsHover);
+  };
+
   return (
     <div className="w-screen flex justify-center fixed bottom-0 z-30">
       {menuOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-40" />
       )}
       {viewPast100vh ? (
-        <div className="flex lg:hidden w-screen justify-center text-xl items-center space-x-6 bg-emerald-900 text-gray-300 py-2 px-6 rounded-md border-2 border-emerald-700">
+        <div className="flex lg:hidden w-screen justify-center text-xl items-center space-x-6 bg-[#3a6463] text-gray-300 py-2 px-6 rounded-md border-2 border-[#3a6463]">
           <div className="w-1/2 flex items-center">
             <a href="/">
               <img className="w-[100px]" src={logo} alt="Logo" />
@@ -75,22 +87,22 @@ const NavBar = ({ home }) => {
           className="hidden lg:flex w-screen h-auto justify-center items-center"
           style={{
             backgroundColor: viewPast100vh
-              ? "rgba(6, 95, 70, 0.704)"
-              : "rgba(75, 75, 75, 0.7)",
-            color: viewPast100vh ? "rgb(229 231 235)" : "rgb(31 41 55)",
+              ? "rgb(58, 100, 99)"
+              : "rgb(58, 100, 99)",
+            color: viewPast100vh ? "rgb(58, 100, 99)" : "rgb(229 231 235)",
           }}
         >
           <ul
             className={`${
               viewPast100vh === true
-                ? "bg-black text-gray-800 text-5xl"
-                : "text-emerald-800"
-            } hidden lg:flex justify-center w-auto text-xl items-center space-x-20  text-gray-800 py-2 px-10 rounded-md border-2 border-gray-600`}
+                ? "bg-[#3a6463] text-gray-200 text-5xl"
+                : "text-gray-200"
+            } hidden lg:flex justify-center w-auto text-xl items-center space-x-20  text-gray-200 py-2 px-10 rounded-md border-2 border-gray-600`}
             style={{
               backgroundColor: viewPast100vh
-                ? "rgb(6 95 70)"
-                : "rgba(224, 224, 224, 0.7)",
-              color: viewPast100vh ? "rgb(229 231 235)" : "rgb(31 41 55)",
+                ? "#3a6463"
+                : "#3a6463",
+              color: viewPast100vh ? "rgb(229 231 235)" : "rgb(229 231 235)",
             }}
           >
             <li>
@@ -112,7 +124,7 @@ const NavBar = ({ home }) => {
                 INICIO
               </a>
             </li>
-            <li>
+            <li className="relative" onMouseEnter={handleProjectsHover} onMouseLeave={handleProjectsHover}>
               <a
                 href="/proyectos"
                 onClick={() => handleNavClick("/proyectos")}
@@ -130,6 +142,17 @@ const NavBar = ({ home }) => {
               >
                 PROYECTOS
               </a>
+              <div className={` ${projetsHover ? "" : "hidden" } absolute left-[-12px] top-[-257px] bg-[#3a6463] p-3 pb-2 rounded-md`}>
+                <ul className="flex flex-wrap justify-start items-center space-y-2">
+                {projectsType?.map((type) => (
+                  <li className="w-full text-left hover:underline cursor-pointer"
+                  onClick={() => {handleTypeClick(type)}}
+                  >
+                    {type.label}
+                  </li>
+                ))}  
+                 </ul>
+              </div>
             </li>
             <li>
               <a
@@ -191,7 +214,7 @@ const NavBar = ({ home }) => {
           </ul>
         </div>
       ) : (
-        <ul className="hidden lg:flex justify-center text-xl items-center space-x-12 bg-emerald-900 text-gray-300 py-2 px-4 rounded-md border-2 border-emerald-700">
+        <ul className="hidden lg:flex justify-center text-xl items-center space-x-12 bg-[#3a6463] text-gray-300 py-2 px-4 rounded-md border-2 border-emerald-700">
           <li>
             <a
               href="/"
@@ -203,7 +226,7 @@ const NavBar = ({ home }) => {
               INICIO
             </a>
           </li>
-          <li>
+          <li className="relative" onMouseEnter={handleProjectsHover} onMouseLeave={handleProjectsHover}>
             <a
               href="/proyectos"
               onClick={() => handleNavClick("/proyectos")}
@@ -213,6 +236,17 @@ const NavBar = ({ home }) => {
             >
               PROYECTOS
             </a>
+            <div className={` ${projetsHover ? "" : "hidden" } absolute left-[-12px] top-[-258px] bg-[#3a6463] p-3 pb-2 rounded-md`}>
+                <ul className="flex flex-wrap justify-start items-center space-y-2">
+                {projectsType?.map((type) => (
+                  <li className="w-full text-left hover:underline cursor-pointer"
+                  onClick={() => {handleTypeClick(type)}}
+                  >
+                    {type.label}
+                  </li>
+                ))}  
+                 </ul>
+              </div>
           </li>
           <li>
             <a

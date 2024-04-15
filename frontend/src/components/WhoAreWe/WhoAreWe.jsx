@@ -29,22 +29,13 @@ const WhoAreWe = ({ img }) => {
           </div>
           <div className="w-full">
             <p className="text-left text-gray-700">
-              Somos un estudio con 30 años de trayectoria de labor profesional
-              en Arquitectura, brinda servicios en Tucumán, y Provincias del
-              Norte del País, como en Ciudades del Sur de Brasil.
+            Ubicados en el corazón del norte argentino, en Tucumán, rodeados de la vibrante identidad latinoamericana, nos enorgullece ofrecer una amplia trayectoria en el mundo de la arquitectura y el diseño. En nuestro estudio, fusionamos la riqueza de nuestra cultura con la excelencia profesional para ofrecer proyectos únicos y funcionales. Desde arquitectura comercial hasta residencial, pasando por espacios dedicados a la salud y el bienestar, abordamos cada proyecto con pasión y compromiso.
             </p>
           </div>
 
           <div className="text-left w-full">
             <p>
-              Realiza específicamente Proyectos de Arquitectura, Dirección
-              Técnica, Conducción y Gerenciamiento de Obras.
-            </p>
-          </div>
-          <div className="text-left w-full">
-            <p>
-              Contando con experiencia en Arquitectura Comercial, Habitacional,
-              para la Salud y la Administración.
+            Nos especializamos en llevar tus ideas del papel a la realidad, brindando servicios que van desde la concepción del proyecto hasta su dirección técnica y gerenciamiento de obras. Valoramos profundamente el contexto y la identidad de cada lugar, asegurando que nuestras obras respeten y enriquezcan su entorno.
             </p>
           </div>
         </div>

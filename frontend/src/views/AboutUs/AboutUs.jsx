@@ -13,20 +13,29 @@ import perfil from "../../assets/perfil.png";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import { logoClientes } from "../../assets/logosClientes";
 import { logoRef } from "../../assets/logosRefComerciales";
+import img3 from "../../assets/fondo.png";
+
 const AboutUs = () => {
   return (
     <div className="">
       <FlyerAboutUs />
-      <div className="py-6 lg:py-12 bg-gray-100 px-2 lg:px-10 xl:px-32">
-        <div className=" bg-gray-100">
+      <div
+        className="py-6 lg:py-12 px-2 lg:px-10 xl:px-32"
+        style={{
+          backgroundImage: `url(${img3})`,
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div>
           <WhoAreWe img={img} />
           <Ant hormiga={hormiga} />
           <img className="rounded-xl" src={perfil} alt="" />
         </div>
-        <div className="pb-20 space-y-20 pt-16 bg-gray-100">
-          <ItemsHome />
-          <LogoCarousel logos={logoClientes} title={"CONFIARON EN NOSOTROS"} />
-          <LogoCarousel logos={logoRef} title={"REFERENCIAS COMERCIALES"} />
+        <div className="pb-20 space-y-20 pt-16">
+          <LogoCarousel logos={logoClientes} title={"Confiaron en nosotros:"} />
+          {/* <ItemsHome /> */}
+          <LogoCarousel logos={logoRef} title={"Referencias comerciales: "} />
           <ContactUs />
         </div>
       </div>

@@ -5,6 +5,7 @@ import AboutUs from "./views/AboutUs/AboutUs";
 import Services from "./views/Services/Services";
 import Porjects from "./views/Projects/Projects";
 import Project from "./views/Project/Project";
+import Porto from "./views/Porto/Porto";
 import "./App.css"
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route exact path="/servicios" component={Services} />
       <Route exact path="/quienes-somos" component={AboutUs} />
       <Route exact path="/proyecto/:id" component={Project} />
+      <Route exact path="/porto" component={Porto} />
 
     </div>
   );
