@@ -9,11 +9,12 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
   return (
     <div
-      className="w-full flex flex-wrap justify-center items-center pt-6 mb-20 lg:py-6"
+      className="w-full flex flex-wrap justify-center items-center pt-6 mb-20 lg:mb-0 lg:py-6"
       style={{
-        backgroundImage: `url(${bg_image})`,
-        backgroundSize: "auto 100%", // La imagen se ajustará solo en altura
-        backgroundPosition: "center", // La imagen se centrará verticalmente
+        backgroundColor: "#0c6464 ",
+        // backgroundImage: `url(${bg_image})`,
+        // backgroundSize: "auto 100%", // La imagen se ajustará solo en altura
+        // backgroundPosition: "center", // La imagen se centrará verticalmente
       }}
     >
       <div className="w-full flex flex-wrap justify-center items-start px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28 py-10 space-x-0 lg:space-x-14 space-y-8 lg:space-y-0">

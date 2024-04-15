@@ -58,7 +58,7 @@ const Services = () => {
               visiones y necesidades para establecer una sólida base de diseño.
             </p>
           </div>
-          <div className="w-full max-h-[400px] lg:w-[60%] hidden lg:flex justify-end items-start overflow-hidden rounded-lg">
+          <div className="w-full lg:w-[60%] hidden lg:flex justify-end items-start overflow-hidden rounded-lg">
             <img
               className="w-full object-cover object-center"
               src={img2}
@@ -67,7 +67,7 @@ const Services = () => {
           </div>
         </div>
         <div className="flex flex-wrap justify-center items-start space-x-0 lg:space-x-8">
-          <div className="w-full max-h-[400px] lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
+          <div className="w-full  lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
             <img
               className="w-full object-cover object-center"
               src={img5}
@@ -109,7 +109,7 @@ const Services = () => {
               estándares más altos de calidad y seguridad.
             </p>
           </div>
-          <div className="w-full max-h-[400px] lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
+          <div className="w-full  lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
             <img
               className="w-full object-cover object-center"
               src={img6}
@@ -118,7 +118,7 @@ const Services = () => {
           </div>
         </div>
         <div className="flex flex-wrap justify-center items-start space-x-0 lg:space-x-8">
-          <div className="w-full max-h-[400px] lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
+          <div className="w-full lg:w-[60%] hidden lg:flex items-start overflow-hidden rounded-lg">
             <img
               className="w-full object-cover object-center"
               src={img}
