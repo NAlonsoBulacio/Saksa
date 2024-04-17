@@ -49,11 +49,12 @@ const Footer = () => {
               />
               <h1>+381 4291652</h1>
             </a>
-            <a href="/" target="_blank" className="w-full flex justify-start items-start">
+            <a
+              href="mailto:saksaarq@gmail.com" target="_blank" className="w-full flex justify-start items-start hover:underline">
               <IoMailOutline className="w-8"
               style={{marginTop: "0.3rem"}}
               />
-              <h1>info@saksa.com</h1>
+              <h1>saksaarq@gmail.com</h1>
             </a>
             <a className="w-full flex justify-start items-start">
               <BsPinMapFill className="w-8"
@@ -61,7 +62,7 @@ const Footer = () => {
               />
               <h1>Tucumán, Argentina</h1>
             </a>
-            <a  href="https://wa.me/+5493814097860" target="_blank" className="w-full flex justify-start items-start">
+            <a  href="https://wa.me/+5493814097860" target="_blank" className="w-full flex justify-start items-start hover:underline">
               <FaWhatsapp className="w-8"
               style={{marginTop: "0.3rem"}}
               />

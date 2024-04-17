@@ -11,7 +11,7 @@ const ContactForm = () => {
   });
 
   const serviceId = "service_d3be1jm";
-  const templateId = "template_s5qu5dh";
+  const templateId = "template_bl7wx9y";
   const apiKey = "2MjSYyOi2hn-e8l4w";
 
   const handleChange = (e) => {
