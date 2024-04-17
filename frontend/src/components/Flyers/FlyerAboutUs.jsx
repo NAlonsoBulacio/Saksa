@@ -1,16 +1,13 @@
 import React from "react";
 import logo from "../../assets/logo.png";
-import img from "../../assets/5.jpg";
-import img2 from "../../assets/images/image14.png";
-import img3 from "../../assets/images/image15.png";
-
+import { banner, banner2 } from "../../assets";
 const FlyerAboutUs = () => {
   return (
     <div className="w-full flex flex-wrap justify-start items-center relative h-[50vh]">
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: `url(${img2})`,
+          backgroundImage: `url(${banner})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
         }}
@@ -18,7 +15,7 @@ const FlyerAboutUs = () => {
       <div
         className="absolute block lg:hidden inset-0 z-0"
         style={{
-          backgroundImage: `url(${img3})`,
+          backgroundImage: `url(${banner2})`,
           backgroundSize: "100% 100%",
           backgroundSize: "cover",
         }}
