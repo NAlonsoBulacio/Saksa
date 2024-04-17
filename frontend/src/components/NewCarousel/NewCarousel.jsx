@@ -7,7 +7,7 @@ const CarouselSlider = () => {
   const images = [
     { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352206/Saksa/edificio-9dejulio_ikgrkj.jpg", text: "Edificio 9 de Julio" },
     { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352208/Saksa/boulevard-consultorios_oojpea.jpg", text: "Boulevard Consultorios" },
-    { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352208/Saksa/edificio-las-piedras_reh0yg.jpg", text: "Edificio Las Piedras" },
+    { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713353022/Saksa/edificio-las-piedras_nfrawc.jpg", text: "Edificio Las Piedras" },
   ];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(images[0]);

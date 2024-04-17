@@ -2,9 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import img from "../../assets/home5.png";
-import img3 from "../../assets/fondo.png";
-import img2 from "../../assets/home4.png";
+import { fondo, home4, home5 } from "../../assets";
 import logoNegro from "../../assets/logo-negro.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";
@@ -33,7 +31,7 @@ const Home = () => {
         <div
           className="absolute hidden lg:block inset-0 z-0"
           style={{
-            backgroundImage: `url(${img})`,
+            backgroundImage: `url(${home5})`,
             backgroundSize: "100% 100%",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
@@ -52,7 +50,7 @@ const Home = () => {
         <div
           className="absolute block lg:hidden inset-0 z-0"
           style={{
-            backgroundImage: `url(${img2})`,
+            backgroundImage: `url(${home4})`,
             backgroundSize: "cover",
           }}
         ></div>
@@ -74,7 +72,7 @@ const Home = () => {
       </div>
       <div
         style={{
-          backgroundImage: `url(${img3})`,
+          backgroundImage: `url(${fondo})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
         }}
