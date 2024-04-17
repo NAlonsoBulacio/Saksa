@@ -32,9 +32,11 @@ const Ant = ({ hormiga }) => {
           } justify-center flex-wrap items-start text-left flex w-[93%] lg:w-[60%] space-y-4 border-b-2 border-emerald-800 cursor-pointer text-lg lg:text-xl text-gray-800`}
           onClick={() => handleOpenDiv()}
         >
-          <p className="w-full   ">
-          La imagen de la hormiga está llena de simbolismos que reflejan nuestra visión en el mundo de la arquitectura. Vemos las ciudades como parte de la naturaleza, como si fueran hormigueros gigantes, esta perspectiva nos recuerda que somos parte de un mundo más grande y nos motiva a construir de manera consciente, cuidando nuestro hogar natural.
-
+          <p className="w-full hidden lg:block  ">
+          {`La imagen de la hormiga está llena de simbolismos que reflejan nuestra visión en el ${openDiv ? "" : "(...)"} mundo de la arquitectura. Vemos las ciudades como parte de la naturaleza, como si fueran hormigueros gigantes, esta perspectiva nos recuerda que somos parte de un mundo más grande y nos motiva a construir de manera consciente, cuidando nuestro hogar natural.`}
+          </p>
+          <p className="w-full block lg:hidden">
+          {`La imagen de la hormiga está llena de ${openDiv ? "" : "(...)"} simbolismos que reflejan nuestra visión en el mundo de la arquitectura. Vemos las ciudades como parte de la naturaleza, como si fueran hormigueros gigantes, esta perspectiva nos recuerda que somos parte de un mundo más grande y nos motiva a construir de manera consciente, cuidando nuestro hogar natural.`}
           </p>
           <p className="w-full">
           El trabajo en equipo para la creación colectiva de algo más grande nos inspira. La capacidad de las hormigas para cargar varias veces su propio peso es un recordatorio del compromiso con el bien común. 
