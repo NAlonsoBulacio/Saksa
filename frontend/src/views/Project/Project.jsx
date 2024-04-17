@@ -60,7 +60,7 @@ const Project = ({ match }) => {
           </div>
           <div className="w-full flex flex-wrap justify-between items-center pb-20 px-0 lg:px-10 xl:px-32 space-y-8">
             <div className="w-full flex justify-between items-center px-2">
-              <h1 className="text-left text-3xl lg:text-5xl  font-glacial-bold text-green-800 font-bold">
+              <h1 className="text-left text-3xl lg:text-5xl  font-glacial-bold text-[#0c6464] font-bold">
                 {detail.name}
               </h1>
             </div>

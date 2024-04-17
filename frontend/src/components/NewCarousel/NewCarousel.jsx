@@ -31,12 +31,6 @@ const CarouselSlider = () => {
     };
   }, [selectedIndex]);
 
-  // const previous = () => {
-  //   const condition = selectedIndex > 0;
-  //   const nextIndex = condition ? selectedIndex - 1 : images.length -1;
-  //   setSelectedImage(images[nextIndex]);
-  //   setSelectedIndex(nextIndex);
-  // };
   const next = () => {
     const condition = selectedIndex < images.length - 1;
     const nextIndex = condition ? selectedIndex + 1 : 0;
@@ -61,7 +55,7 @@ const CarouselSlider = () => {
             {selectedImage.text}
           </h1>
           <a href="/proyectos" className="my-2">
-            <button className="border-2 border-white px-2 transform-transition hover:bg-emerald-800 hover:border-emerald-800 duration-300  text-xl">
+            <button className="border-2 border-white px-2 transform-transition hover:bg-[#0c6464] hover:border-[#0c6464] duration-300  text-xl">
               Ver todas las propiedades
             </button>
           </a>
