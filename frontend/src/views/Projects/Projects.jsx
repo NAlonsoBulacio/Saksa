@@ -7,7 +7,7 @@ import ContactUs from "../../components/ContactUs/ContactUs";
 import {useDispatch, useSelector } from "react-redux";
 import { getProjects } from "../../redux/actions";
 import { useLocation } from 'react-router-dom';
-import img3 from "../../assets/fondo.png";
+import { fondo } from "../../assets";
 const Projects = () => {
   const [projectsInView, setProjectsInView] = useState([]);
   const [filter, setFilter] = useState("todos");
@@ -69,7 +69,7 @@ const Projects = () => {
       <FlyerAboutUs />
       <div className="flex flex-wrap justify-center items-center px-4 lg:px-10 xl:px-20 py-2 lg:py-14 space-y-4"
               style={{
-                backgroundImage: `url(${img3})`,
+                backgroundImage: `url(${fondo})`,
                 backgroundSize: "cover",
                 backgroundAttachment: "fixed",
               }}

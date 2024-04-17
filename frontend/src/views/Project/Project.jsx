@@ -5,7 +5,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import Carousel from "../../components/Carousel/Carousel";
 import Carousel2 from "../../components/Carousel2/Carousel2";
 import img from "../../assets/1.jpg";
-import img3 from "../../assets/fondo.png";
+import { fondo } from "../../assets";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectId, emptyDetail } from "../../redux/actions";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
@@ -36,7 +36,7 @@ const Project = ({ match }) => {
       {detail ? (
         <div
         style={{
-          backgroundImage: `url(${img3})`,
+          backgroundImage: `url(${fondo})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
         }}

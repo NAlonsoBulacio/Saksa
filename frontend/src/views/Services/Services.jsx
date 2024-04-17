@@ -7,13 +7,13 @@ import img2 from "../../assets/images/image3.png";
 import img5 from "../../assets/images/image5.png";
 import img6 from "../../assets/images/image10.jpg";
 import Footer from "../../components/Footer/Footer";
-import img3 from "../../assets/fondo.png";
+import { fondo } from "../../assets";
 
 const Services = () => {
   return (
     <div 
     style={{
-      backgroundImage: `url(${img3})`,
+      backgroundImage: `url(${fondo})`,
       backgroundSize: "cover",
       backgroundAttachment: "fixed",
     }}

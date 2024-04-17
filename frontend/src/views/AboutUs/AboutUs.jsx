@@ -13,7 +13,7 @@ import perfil from "../../assets/perfil.png";
 import LogoCarousel from "../../components/LogoCarousel/LogoCarousel";
 import { logoClientes } from "../../assets/logosClientes";
 import { logoRef } from "../../assets/logosRefComerciales";
-import img3 from "../../assets/fondo.png";
+import { fondo } from "../../assets";
 
 const AboutUs = () => {
   return (
@@ -22,7 +22,7 @@ const AboutUs = () => {
       <div
         className="py-6 lg:py-12 px-2 lg:px-10 xl:px-32"
         style={{
-          backgroundImage: `url(${img3})`,
+          backgroundImage: `url(${fondo})`,
           backgroundSize: "cover",
           backgroundAttachment: "fixed",
         }}
