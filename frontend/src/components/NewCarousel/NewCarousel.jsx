@@ -5,9 +5,9 @@ import img3 from "../../assets/destacadas/edificio-las-piedras.jpg";
 import "./NewCarousel.css";
 const CarouselSlider = () => {
   const images = [
-    { img: img1, text: "Edificio 9 de Julio" },
-    { img: img2, text: "Boulevard Consultorios" },
-    { img: img3, text: "Edificio Las Piedras" },
+    { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352206/Saksa/edificio-9dejulio_ikgrkj.jpg", text: "Edificio 9 de Julio" },
+    { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352208/Saksa/boulevard-consultorios_oojpea.jpg", text: "Boulevard Consultorios" },
+    { img: "https://res.cloudinary.com/doczyujqf/image/upload/v1713352208/Saksa/edificio-las-piedras_reh0yg.jpg", text: "Edificio Las Piedras" },
   ];
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedImage, setSelectedImage] = useState(images[0]);
