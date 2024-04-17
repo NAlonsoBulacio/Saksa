@@ -42,7 +42,7 @@ const Project = ({ match }) => {
           }}
         >
           <FlyerAboutUs />
-          <div className="flex justify-start items-start space-x-3  px-0 lg:px-10 xl:px-32 pt-4 lg:pt-20 pb-4 lg:pb-8 text-lg lg:text-xl text-gray-700">
+          <div className="flex justify-start items-start space-x-3  px-2 lg:px-10 xl:px-32 pt-4 lg:pt-20 pb-4 lg:pb-8 text-lg lg:text-xl text-gray-700">
             <a className="hover:underline" href="/">
               Inicio
             </a>
@@ -66,7 +66,7 @@ const Project = ({ match }) => {
                 fullScreen ? "w-screen" : "w-full lg:w-[1100px]"
               } z-20 flex flex-wrap lg:flex-nowrap justify-between items-start gap-3`}
             >
-              <div className="w-[80%]">
+              <div className="w-full lg:w-[80%]">
                 <Carousel2
                   handleFullScreen={handleFullScreen}
                   fullScreen={fullScreen}
@@ -74,7 +74,7 @@ const Project = ({ match }) => {
                 />
               </div>
 
-              <div className="w-full lg:w-[20%] text-xl lg:text-2xl">
+              <div className="w-full lg:w-[20%] px-2 lg:px-0 text-xl lg:text-2xl">
                 <p>
                   <span className="text-bold">Año:</span> 2000
                 </p>
