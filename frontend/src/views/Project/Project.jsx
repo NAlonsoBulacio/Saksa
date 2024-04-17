@@ -80,7 +80,6 @@ const Project = ({ match }) => {
               <div className="w-[20%] text-2xl">
                 <p><span className="text-bold">Año:</span> 2000</p>
                 <p><span className="text-bold">Superficie:</span> 50 m2</p>
-                <p className="text-xl">hola como estas, esta es la descripcion de hanna c. Veremos si quieren usar estas eccion</p>
               </div>
             </div>
             {/* <div className="w-full flex flex-wrap justify-start space-y-4 py-10 px-2">
