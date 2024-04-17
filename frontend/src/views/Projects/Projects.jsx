@@ -8,7 +8,6 @@ import {useDispatch, useSelector } from "react-redux";
 import { getProjects } from "../../redux/actions";
 import { useLocation } from 'react-router-dom';
 import img3 from "../../assets/fondo.png";
-
 const Projects = () => {
   const [projectsInView, setProjectsInView] = useState([]);
   const [filter, setFilter] = useState("todos");
@@ -21,7 +20,6 @@ const Projects = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    console.log(stateFromURL);
     if(stateFromURL){
       const filterState = stateFromURL.type
       const filteredProjectsType = projects?.filter(
@@ -77,12 +75,12 @@ const Projects = () => {
               }}
       >
         <div className="w-full flex flex-wrap justify-center items-center space-y-2 lg:space-y-4 py-6">
-          <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-green-800 tracking-[0.2rem]">
+          <h1 className="w-full text-center font-glacial-bold text-3xl lg:text-5xl text-[#0c6464] tracking-[0.2rem]">
             PROYECTOS
           </h1>
           <div className="w-full flex justify-center ">
             <div className="w-1/5">
-              <hr className=" border-[1.5px] border-green-800" />
+              <hr className=" border-[1.5px] border-[#0c6464]" />
             </div>
           </div>
         </div>
@@ -116,16 +114,16 @@ const Projects = () => {
           <ul className="hidden lg:flex flex-wrap justify-center lg:justify-between items-center space-x-6 text-xl">
             <li
               className={` ${
-                filter === "todos" ? "text-emerald-800 font-bold underline" : ""
-              } cursor-pointer hover:text-emerald-800 hover:font-bold`}
+                filter === "todos" ? "text-[#0c6464] font-bold underline" : ""
+              } cursor-pointer hover:text-[#0c6464] hover:font-bold`}
               onClick={() => filterProjects(0, "todos")}
             >
               TODOS
             </li>
             <li
               className={`${
-                filter === "salud" ? "text-emerald-800 font-bold underline" : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer`}
+                filter === "salud" ? "text-[#0c6464] font-bold underline" : ""
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer`}
               onClick={() => filterProjects(1, "salud")}
             >
               SALUD/BIENESTAR
@@ -133,9 +131,9 @@ const Projects = () => {
             <li
               className={`${
                 filter === "oficinas"
-                  ? "text-emerald-800 font-bold underline"
+                  ? "text-[#0c6464] font-bold underline"
                   : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer`}
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer`}
               onClick={() => filterProjects(2, "oficinas")}
             >
               OFICINAS/COMERCIAL
@@ -143,9 +141,9 @@ const Projects = () => {
             <li
               className={`${
                 filter === "viviendas"
-                  ? "text-emerald-800 font-bold underline"
+                  ? "text-[#0c6464] font-bold underline"
                   : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer `}
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer `}
               onClick={() => filterProjects(3, "viviendas")}
             >
               VIVIENDAS UNIFAMILIARES
@@ -153,17 +151,17 @@ const Projects = () => {
             <li
               className={`${
                 filter === "altura"
-                  ? "text-emerald-800 font-bold underline"
+                  ? "text-[#0c6464] font-bold underline"
                   : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer `}
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer `}
               onClick={() => filterProjects(4, "altura")}
             >
               OBRAS EN ALTURA
             </li>
             <li
               className={`${
-                filter === "otros" ? "text-emerald-800 font-bold underline" : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer`}
+                filter === "otros" ? "text-[#0c6464] font-bold underline" : ""
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer`}
               onClick={() => filterProjects(5, "otros")}
             >
               OTROS PROYECTOS
@@ -171,9 +169,9 @@ const Projects = () => {
             <li
               className={`${
                 filter === "diseños"
-                  ? "text-emerald-800 font-bold underline"
+                  ? "text-[#0c6464] font-bold underline"
                   : ""
-              } hover:text-emerald-800 hover:font-bold cursor-pointer`}
+              } hover:text-[#0c6464] hover:font-bold cursor-pointer`}
               onClick={() => filterProjects(6, "diseños")}
             >
               DISEÑOS
@@ -181,9 +179,11 @@ const Projects = () => {
           </ul>
         </div>
         <div>
-          <ProjectsContainer projects={projectsInView} />
+          <ProjectsContainer 
+          projects={projectsInView.length > 1 ? projectsInView : "null"} 
+          />
         </div>
-        <div className="py-6">
+        <div className="w-full py-6">
           <ContactUs />
         </div>
       </div>

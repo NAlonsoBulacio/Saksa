@@ -4,12 +4,12 @@ const OurServices = () => {
   return (
     <div className="w-full flex flex-wrap justify-center items-center space-y-6 py-4 lg:py-12">
       <div className="w-full flex flex-wrap justify-center items-center space-y-3">
-        <h1 className="w-full text-center text-3xl lg:text-4xl font-glacial-bold tracking-[0.2rem] text-green-800">
+        <h1 className="w-full text-center text-3xl lg:text-4xl font-glacial-bold tracking-[0.2rem] text-[#0c6464]">
           NUESTROS SERVICIOS
         </h1>
         <div className="w-full flex justify-center ">
           <div className="w-1/5">
-            <hr className=" border-[1.5px] border-green-700" />
+            <hr className=" border-[1.5px] border-[#0c6464]" />
           </div>
         </div>
       </div>
@@ -54,7 +54,7 @@ const OurServices = () => {
           </div>
           <a
             href="/servicios"
-            className="bg-emerald-800 text-gray-100 py-2 px-3 rounded-md border-2 border-emerald-900 text-xl transform-translation hover:scale-110 duration-200"
+            className="bg-[#0c6464] text-gray-100 py-2 px-3 rounded-md border-2 border-emerald-900 text-xl transform-translation hover:scale-110 duration-200"
           >
             Ver Más
           </a>

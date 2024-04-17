@@ -13,7 +13,7 @@ const DescriptionContact = () => {
           SOLICITANOS INFORMACIÓN
         </p>
         <div className="w-full">
-          <p className="text-left text-3xl lg:text-5xl font-bold text-green-800">
+          <p className="text-left text-3xl lg:text-5xl font-bold text-[#0c6464]">
             ¿Que tienes en mente?
           </p>
         </div>
@@ -27,7 +27,7 @@ const DescriptionContact = () => {
         </div>
         <div className="w-full flex justify-start ">
           <div className="w-1/5">
-            <hr className="my-2 border-[1.5px] border-green-800" />
+            <hr className="my-2 border-[1.5px] border-[#0c6464]" />
           </div>
         </div>
         <div className="w-full flex flex-wrap justify-start items-center text-left text-lg text-gray-500 space-y-4">

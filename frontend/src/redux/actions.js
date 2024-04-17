@@ -6,7 +6,7 @@ export const EMPTY = "EMPTY";
 export const getProjects = () => {
     return async function(dispatch) {
       try {
-        const backData = await axios.get(`http://localhost:1337/api/proyectos?populate=*`);
+        const backData = await axios.get(`https://strapi-saksa-b31890582c49.herokuapp.com/api/proyectos?populate=*`);
         const projects = backData.data.data;
         dispatch({ type: GET_PROJECTS, payload: projects });
       } catch (error) {
@@ -16,7 +16,7 @@ export const getProjects = () => {
   };
   export const getProjectId = (id) => {
     return async function (dispatch) {
-      const backData = await axios.get(`http://localhost:1337/api/proyectos/${id}?populate=*`);
+      const backData = await axios.get(`https://strapi-saksa-b31890582c49.herokuapp.com/api/proyectos/${id}?populate=*`);
       const project = backData.data;
       dispatch({ type: GET_PROJECTS_ID, payload: project.data });
     };

@@ -21,12 +21,12 @@ const Services = () => {
       <FlyerAbout />
       <div className="flex flex-wrap justify-center items-center px-2 lg:px-10 xl:px-32 space-y-16 py-10">
         <div className="w-full flex flex-wrap justify-center items-center  space-y-6">
-          <h1 className="text-3xl lg:text-5xl tracking-[0.2rem] font-glacial-bold text-green-800 text-center">
+          <h1 className="text-3xl lg:text-5xl tracking-[0.2rem] font-glacial-bold text-[#0c6464] text-center">
             NUESTROS SERVICIOS
           </h1>
           <div className="w-full flex justify-center ">
             <div className="w-1/5">
-              <hr className=" border-[1.5px] border-green-800" />
+              <hr className=" border-[1.5px] border-[#0c6464]" />
             </div>
           </div>
           <p className="w-full px-0 lg:px-16 text-xl lg:text-xl text-center text-gray-800">
@@ -43,7 +43,7 @@ const Services = () => {
         </div>
         <div className="flex flex-wrap justify-center items-start space-x-0 lg:space-x-8">
           <div className="w-full lg:w-[30%] flex flex-wrap justify-start items-start px-0 lg:px-10 space-y-3 lg:space-y-0">
-            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-green-800">
+            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-[#0c6464]">
               ESTUDIOS PRELIMINARES
             </h1>
             <img
@@ -75,7 +75,7 @@ const Services = () => {
             />
           </div>
           <div className="w-full lg:w-[30%] flex flex-wrap justify-start items-start px-0 lg:px-10 space-y-3 lg:space-y-0">
-            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-green-800">
+            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-[#0c6464]">
               PROYECTOS DE ARQUITECTURA
             </h1>
             <img
@@ -92,7 +92,7 @@ const Services = () => {
         </div>
         <div className="flex flex-wrap justify-center items-start space-x-0 lg:space-x-8">
           <div className="w-full lg:w-[30%] flex flex-wrap justify-start items-start px-0 lg:px-10 space-y-3 lg:space-y-0">
-            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-green-800">
+            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-[#0c6464]">
               DIRECCIÓN TÉCNICA
             </h1>
             <img
@@ -126,7 +126,7 @@ const Services = () => {
             />
           </div>
           <div className="w-full lg:w-[30%] flex flex-wrap justify-start items-start px-0 lg:px-10 space-y-3 lg:space-y-0">
-            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-green-800">
+            <h1 className="text-2xl font-glacial-bold tracking-[0.2rem] text-[#0c6464]">
               CONDUCCIÓN Y GERENCIAMIENTO DE OBRAS
             </h1>
             <img

@@ -9,12 +9,12 @@ import logo from '../../assets/logo.png'
 const Footer = () => {
   return (
     <div
-      className="w-full flex flex-wrap justify-center items-center pt-6 pb-20 lg:mb-0 lg:py-6"
+      className="w-full flex flex-wrap justify-center items-center pt-6 pb-20 lg:py-6"
       style={{
         backgroundColor: "#0c6464 ",
-        // backgroundImage: `url(${bg_image})`,
-        // backgroundSize: "auto 100%", // La imagen se ajustará solo en altura
-        // backgroundPosition: "center", // La imagen se centrará verticalmente
+         backgroundImage: `url(${bg_image})`,
+         backgroundSize: "auto 100%", 
+         backgroundPosition: "center",
       }}
     >
       <div className="w-full flex flex-wrap justify-center items-start px-4 sm:px-6 md:px-10 lg:px-20 xl:px-28 py-10 space-x-0 lg:space-x-14 space-y-8 lg:space-y-0">
@@ -31,18 +31,18 @@ const Footer = () => {
           </div> */}
           <div className="w-full flex justify-start items-center space-x-4">
           <a href="https://www.instagram.com/saksa_arq/" target="_blank" >
-            <AiOutlineInstagram className=" text-gray-400 text-4xl lg;text-2xl" />
+            <AiOutlineInstagram className=" text-gray-200 text-4xl lg;text-2xl" />
             </a>
           </div>
           <div className="w-full flex justify-start items-center space-x-4">
-            <h1 className="text-gray-300 font-plus-500 text-left text-lg">© 2024 Saksa Arquitectura Todos los derechos reservados.</h1>
+            <h1 className="text-gray-200 font-plus-500 text-left text-lg">© 2024 Saksa Arquitectura Todos los derechos reservados.</h1>
           </div>
         </div>
         <div className="w-full lg:w-[40%] flex flex-wrap justify-center items-center space-y-6">
-          <div className="w-full flex justify-start items-center text-left text-3xl text-gray-200">
+          <div className="w-full flex justify-start items-center text-left text-3xl text-gray-100">
             <h1>Contacto</h1>
           </div>
-          <div className="w-full flex flex-wrap justify-start items-center text-left text-lg text-gray-400 space-y-4">
+          <div className="w-full flex flex-wrap justify-start items-center text-left text-lg text-gray-200 space-y-4">
             <a  className="w-full flex justify-start items-start">
               <AiTwotonePhone className="w-8"
               style={{marginTop: "0.3rem"}}

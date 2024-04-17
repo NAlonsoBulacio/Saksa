@@ -23,7 +23,7 @@ const WhoAreWe = ({ img }) => {
             className="lg:hidden h-full object-cover object-center "
           />
           <div className="w-full">
-            <p className="text-left text-4xl font-bold text-green-800">
+            <p className="text-left text-4xl font-bold text-[#0c6464]">
               ¿Quienes Somos?
             </p>
           </div>

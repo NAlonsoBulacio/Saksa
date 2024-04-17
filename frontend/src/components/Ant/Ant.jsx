@@ -10,7 +10,7 @@ const Ant = ({ hormiga }) => {
   return (
     <div className="flex flex-wrap justify-center items-start space-y-8 py-8">
       <div className="w-full flex flex-wrap justify-center items-start space-y-2 lg:space-y-4">
-        <h1 className="w-full text-center text-3xl lg:text-5xl font-glacial-bold text-green-800">
+        <h1 className="w-full text-center text-3xl lg:text-5xl font-glacial-bold text-[#0c6464]">
           NUESTRA INSPIRACIÓN
         </h1>
 

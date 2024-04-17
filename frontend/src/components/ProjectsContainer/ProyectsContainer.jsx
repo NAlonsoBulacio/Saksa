@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./ProjectsContainer.css";
+import loading from "../../assets/loading/ripples.svg";
 const ProjectsContainer = ({ projects }) => {
-  const [localProjects, setLocalProjects] = useState([]);
+  const [localProjects, setLocalProjects] = useState(null);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
   useEffect(() => {
@@ -9,12 +10,15 @@ const ProjectsContainer = ({ projects }) => {
   }, []);
 
   useEffect(() => {
-    setIsTransitioning(true);
-    const timeoutId = setTimeout(() => {
-      setLocalProjects(projects);
-      setIsTransitioning(false);
-    }, 700);
-    return () => clearTimeout(timeoutId);
+      setIsTransitioning(true);
+      const timeoutId = setTimeout(() => {
+        console.log(projects);
+        if (projects !== "null") {
+          setLocalProjects(projects);
+          setIsTransitioning(false);
+        }
+      }, 1100);
+      return () => clearTimeout(timeoutId);
   }, [projects]);
 
   const handleMouseEnter = (e) => {
@@ -30,8 +34,8 @@ const ProjectsContainer = ({ projects }) => {
   };
 
   return (
-    <div className="flex flex-wrap justify-center items-center space-y-10">
-      {localProjects ? (
+    <div className="w-full flex flex-wrap justify-center items-center space-y-10">
+      {localProjects !== null ? (
         <div className="w-full columns-1 gap-4 lg:gap-4 sm:columns-2 lg:columns-3 [&>div:not(:first-child)]:mt-5 lg:[&>div:not(:first-child)]:mt-6">
           {localProjects?.map((project, index) => (
             <div>
@@ -57,7 +61,7 @@ const ProjectsContainer = ({ projects }) => {
           ))}
         </div>
       ) : (
-        ""
+       <div className="w-full h-full flex justify-center items-center"><img className="w-[200px]" src={loading} alt="" /></div>
       )}
     </div>
   );

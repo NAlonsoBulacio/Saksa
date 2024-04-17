@@ -62,8 +62,8 @@ const Home = () => {
             backgroundColor: "rgba(75, 75, 75, 0.7)",
           }}
         >
-          <h1 className="font-lato-700 text-2xl lg:text-[40px] leading-10 text-gray-300 text-center">
-          Buscamos pensar para emocionar con los ámbitos para la vida
+          <h1 className=" text-2xl lg:text-[38px] tracking-[0.28rem] text-gray-300 text-center">
+          BUSCAMOS EMOCIONAR CON LOS ÁMBITOS DE LA VIDA
           </h1>
         </div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16 z-20">
@@ -101,8 +101,8 @@ const Home = () => {
           </div> */}
         </div>
         <NewCarousel />
-        <div className="py-14 space-y-20 px-2 lg:px-10 xl:px-20">
-          <ItemsHome />
+        <div className="py-20 space-y-20 px-2 lg:px-10 xl:px-20">
+          {/* <ItemsHome /> */}
           <ContactUs />
         </div>
       </div>
