@@ -35,17 +35,14 @@ const Project = ({ match }) => {
     <>
       {detail ? (
         <div
-        style={{
-          backgroundImage: `url(${fondo})`,
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
-        }}
+          style={{
+            backgroundImage: `url(${fondo})`,
+            backgroundSize: "cover",
+            backgroundAttachment: "fixed",
+          }}
         >
           <FlyerAboutUs />
-          <div
-            className="flex justify-start items-start space-x-3  px-0 lg:px-10 xl:px-32 pt-20 pb-8 text-xl text-gray-700"
-
-          >
+          <div className="flex justify-start items-start space-x-3  px-0 lg:px-10 xl:px-32 pt-4 lg:pt-20 pb-4 lg:pb-8 text-lg lg:text-xl text-gray-700">
             <a className="hover:underline" href="/">
               Inicio
             </a>
@@ -67,19 +64,23 @@ const Project = ({ match }) => {
             <div
               className={`${
                 fullScreen ? "w-screen" : "w-full lg:w-[1100px]"
-              } z-20 flex justify-between items-start gap-3`}
+              } z-20 flex flex-wrap lg:flex-nowrap justify-between items-start gap-3`}
             >
               <div className="w-[80%]">
-              <Carousel2
-                handleFullScreen={handleFullScreen}
-                fullScreen={fullScreen}
-                images={images ? images : ""}
-              />
-            </div>
+                <Carousel2
+                  handleFullScreen={handleFullScreen}
+                  fullScreen={fullScreen}
+                  images={images ? images : ""}
+                />
+              </div>
 
-              <div className="w-[20%] text-2xl">
-                <p><span className="text-bold">Año:</span> 2000</p>
-                <p><span className="text-bold">Superficie:</span> 50 m2</p>
+              <div className="w-full lg:w-[20%] text-xl lg:text-2xl">
+                <p>
+                  <span className="text-bold">Año:</span> 2000
+                </p>
+                <p>
+                  <span className="text-bold">Superficie:</span> 50 m2
+                </p>
               </div>
             </div>
             {/* <div className="w-full flex flex-wrap justify-start space-y-4 py-10 px-2">
