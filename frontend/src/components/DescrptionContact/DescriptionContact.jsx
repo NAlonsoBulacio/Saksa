@@ -30,7 +30,7 @@ const DescriptionContact = () => {
             <hr className="my-2 border-[1.5px] border-[#0c6464]" />
           </div>
         </div>
-        <div className="w-full flex flex-wrap justify-start items-center text-left text-lg text-gray-500 space-y-4">
+        <div className="w-full flex flex-wrap justify-start items-center text-left text-lg text-gray-600 space-y-4">
           <div className="w-full flex justify-start">
             <a className="w-auto flex justify-start items-start">
               <AiTwotonePhone className="w-8" style={{ marginTop: "0.3rem" }} />
@@ -39,12 +39,12 @@ const DescriptionContact = () => {
           </div>
           <div className="w-full flex justify-start">
             <a
-              href="/"
+              href="mailto:saksaarq@gmail.com"
               target="_blank"
-              className="w-auto flex justify-start items-start"
+              className="w-auto flex justify-start items-start hover:underline"
             >
               <IoMailOutline className="w-8" style={{ marginTop: "0.3rem" }} />
-              <h1>info@saksa.com</h1>
+              <h1>saksaarq@gmail.com</h1>
             </a>
           </div>
           <div className="w-full flex justify-start">
@@ -61,14 +61,14 @@ const DescriptionContact = () => {
             <a
               href="https://wa.me/+5493814097860"
               target="_blank"
-              className="w-auto flex justify-start items-start"
+              className="w-auto flex justify-start items-start hover:underline"
             >
               <FaWhatsapp className="w-8" style={{ marginTop: "0.3rem" }} />
               <h1>+54 9 381 4097860</h1>
             </a>
           </div>
         </div>
-        <div className="w-full flex justify-start items-center space-x-4 text-gray-700 pl-2">
+        {/* <div className="w-full flex justify-start items-center space-x-4 text-gray-700 pl-2">
           <a
             href="https://www.instagram.com/saksa_arq/"
             target="_blank"
@@ -76,7 +76,7 @@ const DescriptionContact = () => {
           >
             <AiOutlineInstagram className=" text-2xl hover:scale-110" />
           </a>
-        </div>
+        </div> */}
       </div>
       <div className="w-[40%] hidden lg:flex justify-end items-center ">
         <ContactForm />
