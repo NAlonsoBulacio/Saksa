@@ -60,8 +60,8 @@ const Home = () => {
             backgroundColor: "rgba(75, 75, 75, 0.7)",
           }}
         >
-          <h1 className="font-lato-600 text-2xl lg:text-[38px] tracking-[0.18rem] text-gray-300 text-center">
-          BUSCAMOS EMOCIONAR CON LOS ÁMBITOS DE LA VIDA
+          <h1 className="font-lato-600 text-2xl lg:text-[40px] tracking-[0.13rem] text-gray-300 text-center">
+          Buscamos emocionar con los ámbitos de la vida
           </h1>
         </div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16 z-20">
