@@ -2,19 +2,28 @@ import React, { useState, useEffect } from "react";
 import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import Footer from "../../components/Footer/Footer";
 import NavBar from "../../components/NavBar/NavBar";
-import Carousel from "../../components/Carousel/Carousel";
 import Carousel2 from "../../components/Carousel2/Carousel2";
-import img from "../../assets/1.jpg";
 import { fondo } from "../../assets";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectId, emptyDetail } from "../../redux/actions";
 import { MdOutlineArrowRightAlt } from "react-icons/md";
+import SampleNextArrow from "../../utils/SampleNextArrow";
+import SamplePrevArrow from "../../utils/SamplePrevArrow";
+import Slider from "react-slick";
+import { MdFullscreen, MdFullscreenExit } from "react-icons/md";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Project = ({ match }) => {
   const projectId = match.params.id;
   const [fullScreen, setFullScreen] = useState(false);
   const detail = useSelector((state) => state.detail);
   const dispatch = useDispatch();
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullScreen = () => {
+    setIsFullscreen(!isFullscreen);
+  };
 
   useEffect(() => {
     dispatch(getProjectId(projectId));
@@ -26,11 +35,17 @@ const Project = ({ match }) => {
     };
   }, [dispatch]);
 
-  const handleFullScreen = () => {
-    setFullScreen(!fullScreen);
-  };
   const images = detail ? detail.img : "";
-  console.log(images);
+
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+
   return (
     <>
       {detail ? (
@@ -66,21 +81,82 @@ const Project = ({ match }) => {
                 fullScreen ? "w-screen" : "w-full lg:w-[1100px]"
               } z-20 flex flex-wrap lg:flex-nowrap justify-between items-start gap-3`}
             >
-              <div className="w-full lg:w-[80%]">
-                <Carousel2
-                  handleFullScreen={handleFullScreen}
-                  fullScreen={fullScreen}
-                  images={images ? images : ""}
-                />
-              </div>
-
+              {images ? (
+                <div
+                  className={`w-full lg:w-[80%] h-auto flex justify-center items-center ${
+                    isFullscreen ? "fixed lg:w-full inset-0 z-50 bg-gray-900" : ""
+                  }`}
+                >
+                  <div
+                    className={`w-full ${
+                      isFullscreen ? "w-[80%] h-full" : ""
+                    }`}
+                  >
+                    <Slider
+                      {...settings}
+                      className={`${isFullscreen ? "h-full" : ""}`}
+                    >
+                      {images?.map((image, index) => (
+                        <div
+                          key={index}
+                          className={`h-full px-2 relative ${
+                            isFullscreen
+                              ? "flex justify-center items-center"
+                              : ""
+                          }`}
+                        >
+                          <img
+                            src={image}
+                            alt={`Slide ${index}`}
+                            className={`w-full ${
+                              isFullscreen ? "max-h-full" : ""
+                            }`}
+                          />
+                          {isFullscreen && (
+                            <div className="absolute top-8 right-8">
+                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-700 opacity-60 hover:opacity-80 duration-150 rounded-sm">
+                                <MdFullscreenExit className="text-white w-full text-[60px]" />
+                              </button>
+                            </div>
+                          )}
+                          {!isFullscreen && (
+                            <div className="absolute top-8 right-8 ">
+                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-500 opacity-60 hover:opacity-80 duration-150 rounded-sm">
+                                <MdFullscreen className="text-white w-full text-4xl" />
+                              </button>
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </Slider>
+                  </div>
+                </div>
+              ) : (
+                ""
+              )}
               <div className="w-full lg:w-[20%] px-2 lg:px-0 text-xl lg:text-2xl">
-                <p>
-                  <span className="text-bold">Año:</span> 2000
-                </p>
-                <p>
-                  <span className="text-bold">Superficie:</span> 50 m2
-                </p>
+                {detail.year ? (
+                  <p>
+                    <span className="text-bold">Año:</span> {detail?.year}
+                  </p>
+                ) : (
+                  ""
+                )}
+                {detail.surface ? (
+                  <p>
+                    <span className="text-bold">Superficie:</span>{" "}
+                    {detail?.surface}
+                  </p>
+                ) : (
+                  ""
+                )}
+                {/* {detail.description ? (
+                  <p className="text-xl">
+                   {detail.description}
+                  </p>
+                ) : (
+                  ""
+                )} */}
               </div>
             </div>
             {/* <div className="w-full flex flex-wrap justify-start space-y-4 py-10 px-2">

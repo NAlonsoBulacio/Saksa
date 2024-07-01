@@ -15,6 +15,7 @@ const Projects = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const stateFromURL = location.state;
+
   useEffect(() => {
     dispatch(getProjects());
   }, [dispatch]);
@@ -180,7 +181,7 @@ const Projects = () => {
         </div>
         <div>
           <ProjectsContainer 
-          projects={projectsInView.length > 1 ? projectsInView : "null"} 
+          projects={projectsInView.length > 0 ? projectsInView : "null"} 
           />
         </div>
         <div className="w-full py-6">

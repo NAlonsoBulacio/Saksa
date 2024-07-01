@@ -9,10 +9,10 @@ const ProjectsContainer = ({ projects }) => {
     setIsTransitioning(false);
   }, []);
 
+  console.log(projects);
   useEffect(() => {
       setIsTransitioning(true);
       const timeoutId = setTimeout(() => {
-        console.log(projects);
         if (projects !== "null") {
           setLocalProjects(projects);
           setIsTransitioning(false);

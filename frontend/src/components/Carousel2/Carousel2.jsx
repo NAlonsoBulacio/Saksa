@@ -17,14 +17,15 @@ const Carousel2 = ({ images }) => {
   return (
     <>
       {images ? (
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative w-full h-auto">
           <div
-            className={`w-${containerWidth}vw flex transition-transform ease-out duration-500`}
+            className={`w-${containerWidth}vw flex transition-transform ease-out duration-500 h-auto`}
             style={{ transform: `translateX(-${curr * 100}%)` }}
           >
             {images
               ? images.map((img, index) => (
-                  <img key={index} src={img} alt="img" className="" />
+                  <img key={index} src={img} alt="img" className="w-full h-auto"
+                  style={{ objectFit: "cover" }} />
                 ))
               : ""}
           </div>

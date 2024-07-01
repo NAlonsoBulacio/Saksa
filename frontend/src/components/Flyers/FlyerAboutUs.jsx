@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import { banner, banner2 } from "../../assets";
 const FlyerAboutUs = () => {
   return (
-    <div className="w-full flex flex-wrap justify-start items-center relative h-[50vh]">
+    <div className="w-full flex flex-wrap justify-start items-center relative h-[40vh] lg:h-[50vh]">
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -40,12 +40,6 @@ const FlyerAboutUs = () => {
           backgroundPosition: "top 16% left 6%",
         }}
       ></div>
-      {/* <div className="w-full flex justify-start items-center z-10">
-        <img src={logo} alt="logo" className="max-w-[200px]" />
-      </div> */}
-      {/* <div className="z-10 w-full justify-start px-4 lg:px-10 xl:px-20">
-        <h1 className="text-2xl lg:text-3xl text-left text-gray-300 font-semibold tracking-wide">- Procurando la Excelencia en el Diseño Arquitectónico.</h1>
-      </div> */}
     </div>
   );
 };

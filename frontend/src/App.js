@@ -5,6 +5,9 @@ import AboutUs from "./views/AboutUs/AboutUs";
 import Services from "./views/Services/Services";
 import Porjects from "./views/Projects/Projects";
 import Project from "./views/Project/Project";
+import PropertiesBdd from "./views/BDD/PropertiesBdd";
+import PropertyDetail from "./views/BDD/PropertyDetail"
+import ProductForm from "./views/BDD/ProductForm/ProductForm";
 import "./App.css"
 function App() {
   return (
@@ -15,6 +18,9 @@ function App() {
       <Route exact path="/servicios" component={Services} />
       <Route exact path="/quienes-somos" component={AboutUs} />
       <Route exact path="/proyecto/:id" component={Project} />
+      <Route exact path="/propiedades-bdd" component={PropertiesBdd} />
+      <Route exact path="/cargar-propiedad-bdd" component={ProductForm} />
+      <Route exact path="/propiedad-bdd/:id" component={PropertyDetail} />
     </div>
   );
 }

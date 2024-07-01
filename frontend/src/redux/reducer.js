@@ -10,22 +10,24 @@ const reducer = (state = initialState, action) => {
     case GET_PROJECTS:
       const cleanProjects = action.payload.map(project => ({
         id: project.id,
-        name: project.attributes.titulo,
-        type: project.attributes.tipo,
-        img: project.attributes.proyecto_img.data[0].attributes.formats.large.url
+        name: project.productName,
+        type: project.type,
+        img: project.images[0],
+        description: project.description,
+        year: project.year,
+        surface: project.surface,
       }))
       return { ...state, projects: cleanProjects };
       case GET_PROJECTS_ID:
-        const imagesDetail = action.payload.attributes.proyecto_img.data?.map((img) => (img.attributes?.url))
         const cleanProject = {
           id: action.payload.id,
-          name: action.payload.attributes.titulo,
-          type: action.payload.attributes.tipo,
-          img: imagesDetail,
+          name: action.payload.productName,
+          type: action.payload.type,
+          img: action.payload.images,
+          description: action.payload.description,
+          year: action.payload.year,
+          surface: action.payload.surface,
         }
-        // console.log(cleanProject);
-        // console.log("im");
-        // console.log(imagesDetail);
         return{...state, detail: cleanProject};
         case EMPTY: 
         return {...state, detail: []};

@@ -1,10 +1,16 @@
+import background from "./Fondo2.webp";
+import saksa from "./5.jpg";
+import banner1 from "./images/image14.png";
+import banner1mobile from "./images/image15.png";
+import home1 from "./home5.png";
+import home2 from "./home4.png";
 const fondo =
-  "https://res.cloudinary.com/doczyujqf/image/upload/v1713352804/Saksa/fondo_1_dmhhjb.png";
+  background;
 const home4 =
-  "https://res.cloudinary.com/doczyujqf/image/upload/v1713353071/Saksa/home4_ebfn7b.png";
+home2;
 const home5 =
-  "https://res.cloudinary.com/doczyujqf/image/upload/v1713353073/Saksa/home5_leqiq3.png";
-  const banner = "https://res.cloudinary.com/doczyujqf/image/upload/v1713355438/Saksa/image14_o9ysm2.png";
-  const banner2 = "https://res.cloudinary.com/doczyujqf/image/upload/v1713355438/Saksa/image15_l804si.png";
+home1;
+  const banner = banner1;
+  const banner2 = banner1mobile;
 
 export { fondo, home4, home5, banner, banner2 };

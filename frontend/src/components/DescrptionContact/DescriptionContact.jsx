@@ -9,7 +9,7 @@ const DescriptionContact = () => {
   return (
     <div className="w-full flex flex-wrap justify-center items-start py-10 pb-4 space-y-8 lg:space-y-0">
       <div className="w-full lg:w-1/2 flex flex-wrap justify-center items-center space-y-6 mt-4">
-        <p className="w-full text-center lg:text-left text-gray-500 text-xl lg:text-2xl tracking-[0.3rem]">
+        <p className="w-full text-left text-gray-500 text-xl lg:text-2xl tracking-[0.3rem]">
           SOLICITANOS INFORMACIÓN
         </p>
         <div className="w-full">

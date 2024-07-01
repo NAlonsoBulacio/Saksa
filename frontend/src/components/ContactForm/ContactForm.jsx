@@ -12,7 +12,7 @@ const ContactForm = () => {
 
   const serviceId = "service_d3be1jm";
   const templateId = "template_bl7wx9y";
-  const apiKey = "2MjSYyOi2hn-e8l4w";
+  const apiKey = "Ukt44gaahould7x-y";
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,8 +43,7 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit} className="justify-center items-center">
         <div >
           <h1
-            className="font-glacial-bold text-[#0c6464] text-center md:text-left text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
-            // style={{ color: "#081022" }}
+            className="font-glacial-bold text-[#0c6464] text-left text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
           >
             CONTÁCTANOS
           </h1>

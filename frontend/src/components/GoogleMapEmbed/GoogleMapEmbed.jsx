@@ -5,9 +5,7 @@ const GoogleMapEmbed = () => {
   const embedUrl = `https://www.google.com/maps/embed/v1/place?q=-26.817489529039374,-65.30312572944267&key=${apiKey}`;
 
   return (
-    <div className="w-full flex flex-wrap justify-center items-center py-10 gap-y-6">
-      <div className="w-full flex flex-wrap justify-center items-center ">
-      </div>
+    <div className="w-full flex flex-wrap justify-center items-center">
       <iframe
         className="mapa"
         title="Google Map"

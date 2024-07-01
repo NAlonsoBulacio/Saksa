@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import DescriptionContact from "../../components/DescrptionContact/DescriptionContact";
 import { fondo } from "../../assets";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../../components/Footer/Footer"; 
 import FlyerAboutUs from "../../components/Flyers/FlyerAboutUs";
 import GoogleMapEmbed from "../../components/GoogleMapEmbed/GoogleMapEmbed";
 
