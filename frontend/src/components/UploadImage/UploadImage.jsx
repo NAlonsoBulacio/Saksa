@@ -42,9 +42,9 @@ const UploadImage = ({ handleUploadImage, id, handleUploadImageVariant, handleCl
     console.log(event);
     console.log(event.target);
   
-    const files = event.target.files;
-    if (files.length === 1) {
-      const base64 = await convertBase64(files[0]);
+    // const files = event.target.files;
+    if (event.target.files.length === 1) {
+      const base64 = await convertBase64(event.target.files[0]);
       uploadSingleImage(base64);
       return;
     }
