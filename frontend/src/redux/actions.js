@@ -6,7 +6,7 @@ export const EMPTY = "EMPTY";
 export const getProjects = () => {
     return async function(dispatch) {
       try {
-        const backData = await axios.get(`http://localhost:3001/products`);
+        const backData = await axios.get(`https://saksa-production.up.railway.app/products`);
         const projects = backData.data;
   
         dispatch({ type: GET_PROJECTS, payload: projects });
@@ -18,7 +18,7 @@ export const getProjects = () => {
   };
   export const getProjectId = (id) => {
     return async function (dispatch) {
-      const backData = await axios.get(`http://localhost:3001/products/${id}`);
+      const backData = await axios.get(`https://saksa-production.up.railway.app/products/${id}`);
       const project = backData.data;
       dispatch({ type: GET_PROJECTS_ID, payload: project });
     };

@@ -48,7 +48,7 @@ const ProductForm = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/products",
+        "https://saksa-production.up.railway.app/products",
         form
       );
 
