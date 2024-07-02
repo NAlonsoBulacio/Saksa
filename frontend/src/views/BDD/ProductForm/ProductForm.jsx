@@ -129,10 +129,12 @@ const ProductForm = () => {
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 focus:ring-0 sm:text-sm sm:leading-6"
                   >
                     <option value="">Seleccione una categoría</option>
-                    <option value="Edificios de altura">Edificios de altura</option>
-                    <option value="Salud Publica">Salud Pública</option>
-                    <option value="Domesticos">Domésticos</option>
-                    <option value="Otros">Otros</option>
+                    <option value="salud">SALUD/BIENESTAR</option>
+                    <option value="oficinas">OFICINAS/COMERCIAL</option>
+                    <option value="viviendas">VIVIENDAS UNIFAMILIARES</option>
+                    <option value="altura">OBRAS EN ALTURA</option>
+                    <option value="otros">OTROS PROYECTOS</option>
+                    <option value="diseños">DISEÑOS</option>
                   </select>
                 </div>
               </div>
