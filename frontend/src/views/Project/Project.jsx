@@ -6,13 +6,13 @@ import Carousel2 from "../../components/Carousel2/Carousel2";
 import { fondo } from "../../assets";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectId, emptyDetail } from "../../redux/actions";
-import { MdOutlineArrowRightAlt } from "react-icons/md";
+import { MdOutlineArrowRightAlt, MdFullscreen, MdFullscreenExit } from "react-icons/md";
 import SampleNextArrow from "../../utils/SampleNextArrow";
 import SamplePrevArrow from "../../utils/SamplePrevArrow";
 import Slider from "react-slick";
-import { MdFullscreen, MdFullscreenExit } from "react-icons/md";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "./Project.css";
 
 const Project = ({ match }) => {
   const projectId = match.params.id;
@@ -27,7 +27,7 @@ const Project = ({ match }) => {
 
   useEffect(() => {
     dispatch(getProjectId(projectId));
-  }, [dispatch]);
+  }, [dispatch, projectId]);
 
   useEffect(() => {
     return () => {
@@ -57,7 +57,7 @@ const Project = ({ match }) => {
           }}
         >
           <FlyerAboutUs />
-          <div className="flex justify-start items-start space-x-3  px-2 lg:px-10 xl:px-32 pt-4 lg:pt-20 pb-4 lg:pb-8 text-lg lg:text-xl text-gray-700">
+          <div className="flex justify-start items-start space-x-3 px-2 lg:px-10 xl:px-32 pt-4 lg:pt-20 pb-4 lg:pb-8 text-lg lg:text-xl text-gray-700">
             <a className="hover:underline" href="/">
               Inicio
             </a>
@@ -72,7 +72,7 @@ const Project = ({ match }) => {
           </div>
           <div className="w-full flex flex-wrap justify-between items-center pb-20 px-0 lg:px-10 xl:px-32 space-y-8">
             <div className="w-full flex justify-between items-center px-2">
-              <h1 className="text-left text-3xl lg:text-5xl  font-glacial-bold text-[#0c6464] font-bold">
+              <h1 className="text-left text-3xl lg:text-5xl font-glacial-bold text-[#0c6464] font-bold">
                 {detail.name}
               </h1>
             </div>
@@ -88,40 +88,29 @@ const Project = ({ match }) => {
                   }`}
                 >
                   <div
-                    className={`w-full ${
-                      isFullscreen ? "w-[80%] h-full" : ""
-                    }`}
+                    className={`w-full ${isFullscreen ? "w-[80%] h-full" : ""}`}
                   >
-                    <Slider
-                      {...settings}
-                      className={`${isFullscreen ? "h-full" : ""}`}
-                    >
+                    <Slider {...settings} className={`${isFullscreen ? "h-full" : ""}`}>
                       {images?.map((image, index) => (
                         <div
                           key={index}
-                          className={`h-full px-2 relative ${
-                            isFullscreen
-                              ? "flex justify-center items-center"
-                              : ""
-                          }`}
+                          className={`h-full px-2 relative ${isFullscreen ? "flex justify-center items-center" : ""} group`}
                         >
                           <img
                             src={image}
                             alt={`Slide ${index}`}
-                            className={`w-full ${
-                              isFullscreen ? "max-h-full" : ""
-                            }`}
+                            className={`w-full ${isFullscreen ? "max-h-full" : ""}`}
                           />
                           {isFullscreen && (
-                            <div className="absolute top-8 right-8">
-                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-700 opacity-60 hover:opacity-80 duration-150 rounded-sm">
+                            <div className="absolute top-8 right-8 hidden lg:block group-hover:block">
+                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-700 opacity-0 group-hover:opacity-100 duration-150 rounded-sm">
                                 <MdFullscreenExit className="text-white w-full text-[60px]" />
                               </button>
                             </div>
                           )}
                           {!isFullscreen && (
-                            <div className="absolute top-8 right-8 ">
-                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-500 opacity-60 hover:opacity-80 duration-150 rounded-sm">
+                            <div className="absolute top-8 right-8 hidden lg:block group-hover:block">
+                              <button onClick={toggleFullScreen} className="w-auto h-auto bg-gray-500 opacity-0 group-hover:opacity-100 duration-150 rounded-sm">
                                 <MdFullscreen className="text-white w-full text-4xl" />
                               </button>
                             </div>
@@ -144,8 +133,7 @@ const Project = ({ match }) => {
                 )}
                 {detail.surface ? (
                   <p>
-                    <span className="text-bold">Superficie:</span>{" "}
-                    {detail?.surface}
+                    <span className="text-bold">Superficie:</span> {detail?.surface}
                   </p>
                 ) : (
                   ""
