@@ -46,9 +46,10 @@ const Projects = () => {
 
 
   const filterProjects = (filter, type) => {
+    console.log(type);
     if (filter && filter !== 0) {
       const filteredProjects = projects?.filter(
-        (project) => project.type === filter
+        (project) => project.type === type
       );
       setProjectsInView(filteredProjects);
       setFilter(type);
