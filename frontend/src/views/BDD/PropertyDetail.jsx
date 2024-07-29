@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import { logoTransparent } from "../../assets/images";
 import axios from "axios";
-// import { botinesSizes, camisetasSizes, mediasSizes } from "../../constants";
-// import StockBysizes from "../../components/ProductsTable/StockBySizes";
-// import formatPrice from "../../utils/formatPrice";
 const PropertyDetail = () => {
   const [isChanging, setIsChanging] = useState(false);
   const { id } = useParams();
@@ -14,7 +10,6 @@ const PropertyDetail = () => {
   const [bestSellers, setBestSellers] = useState(false);
   const [newArrivals, setNewArrivals] = useState(false);
   const [specialOffers, setSpecialOffers] = useState(false);
-  // const products = useSelector((state) => state.orebiReducer.products);
 
   const products = [
 
@@ -53,7 +48,7 @@ const PropertyDetail = () => {
     };
 
     axios
-      .put(`https://sitiosports-production.up.railway.app/products/${product.id}`, productChanges)
+      .put(`https://saksa-production.up.railway.app/products/${product.id}`, productChanges)
       .then((response) => {
         // Maneja la respuesta de la solicitud, por ejemplo, muestra una notificación de éxito
         alert("Cambios guardados con éxito");
