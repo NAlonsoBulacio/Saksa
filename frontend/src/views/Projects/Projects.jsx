@@ -15,17 +15,20 @@ const Projects = () => {
   const dispatch = useDispatch();
   const location = useLocation();
   const stateFromURL = location.state;
+// console.log(stateFromURL);
+//   useEffect(() => {
+//     dispatch(getProjects());
+//   }, [dispatch]);
 
   useEffect(() => {
-    dispatch(getProjects());
-  }, [dispatch]);
 
-  useEffect(() => {
     if(stateFromURL){
-      const filterState = stateFromURL.type
+      const filterState = stateFromURL.value
+      console.log(stateFromURL);
       const filteredProjectsType = projects?.filter(
         (project) => project.type === filterState
       );
+      console.log(filteredProjectsType);
       setProjectsInView(filteredProjectsType);
       setFilter(stateFromURL.value);
     }else{
@@ -46,7 +49,6 @@ const Projects = () => {
 
 
   const filterProjects = (filter, type) => {
-    console.log(type);
     if (filter && filter !== 0) {
       const filteredProjects = projects?.filter(
         (project) => project.type === type
