@@ -90,7 +90,7 @@ const Project = ({ match }) => {
                   <div
                     className={`w-full ${isFullscreen ? "w-[80%] h-full" : ""}`}
                   >
-                    <Slider {...settings} className={`${isFullscreen ? "h-full" : ""}`}>
+                    <Slider {...settings} className={`${isFullscreen ? "h-full" : ""} block`}>
                       {images?.map((image, index) => (
                         <div
                           key={index}
@@ -99,7 +99,7 @@ const Project = ({ match }) => {
                           <img
                             src={image}
                             alt={`Slide ${index}`}
-                            className={`w-full ${isFullscreen ? "max-h-full" : ""}`}
+                            className={`w-full img-max-height ${isFullscreen ? "max-h-full" : ""}`}
                           />
                           {isFullscreen && (
                             <div className="absolute top-8 right-8 hidden lg:block group-hover:block">

@@ -13,4 +13,9 @@
   .group-hover\:opacity-0 {
     opacity: 0;
   }
+
+  .img-max-height {
+    max-height: 600px;
+    object-fit: cover; 
+  }
   
