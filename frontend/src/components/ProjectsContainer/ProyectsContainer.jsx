@@ -66,9 +66,9 @@ const ProjectsContainer = ({ projects }) => {
                     <img
                       src={project.img}
                       alt={`Chat ${index}`}
-                      className="w-full h-auto hover:scale-110 transition duration-700 shadow-2xl hover:brightness-50"
+                      className="w-full h-auto hover:scale-110 transition duration-700 shadow-2xl hover:brightness-30"
                     />
-                    <h1 className="absolute inset-0 opacity-0  transition duration-700 text-white flex justify-center items-center text-2xl">
+                    <h1 className="absolute right-3 bottom-3 opacity-0  transition duration-700 text-white flex justify-center items-center text-2xl">
                       {project.name}
                     </h1>
                   </div>
