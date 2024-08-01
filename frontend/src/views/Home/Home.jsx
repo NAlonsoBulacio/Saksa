@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import NewCarousel from "../../components/NewCarousel/NewCarousel";
 import NavBar from "../../components/NavBar/NavBar";
 import Footer from "../../components/Footer/Footer";
-import { fondo, home4, home5 } from "../../assets";
+import { fondo, home4, home5, logo_white } from "../../assets";
 import logoNegro from "../../assets/logo-negro.png";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import Counter from "../../components/Counter/Counter";
@@ -40,7 +40,7 @@ const Home = () => {
         <div
           className="absolute hidden lg:block inset-0 z-10"
           style={{
-            backgroundImage: `url(${logoNegro})`,
+            backgroundImage: `url(${logo_white})`,
             backgroundSize: "12% 12%",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "fixed",
@@ -60,8 +60,8 @@ const Home = () => {
             backgroundColor: "rgba(75, 75, 75, 0.7)",
           }}
         >
-          <h1 className="font-lato-600 text-2xl lg:text-[40px] tracking-[0.13rem] text-gray-300 text-center">
-          Buscamos emocionar con los ámbitos de la vida
+          <h1 className="font-lato-600 text-2xl lg:text-4xl tracking-[0.19rem] text-gray-300 text-center">
+          buscamos emocionar con los ámbitos para la vida
           </h1>
         </div>
         <div className="absolute right-10 lg:right-24 bottom-28 lg:bottom-16 z-20">

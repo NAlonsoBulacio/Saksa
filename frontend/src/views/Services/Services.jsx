@@ -3,7 +3,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import FlyerAbout from "../../components/Flyers/FlyerAboutUs";
 import ContactUs from "../../components/ContactUs/ContactUs";
 import img from "../../assets/images/image1.png";
-import img2 from "../../assets/images/image3.png";
+import img2 from "../../assets/croquis_pre.png";
 import img5 from "../../assets/images/image5.png";
 import img6 from "../../assets/images/image10.jpg";
 import Footer from "../../components/Footer/Footer";
