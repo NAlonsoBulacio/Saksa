@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import UploadImage from "../../../components/UploadImage/UploadImage";
 import { IoIosArrowDown } from "react-icons/io";
+import thumbnailConvert from "../../../utils/convertThumbnail";
 const Variant = ({
   handleChangeVariantImg,
   handleDeleteImage,
@@ -47,7 +48,7 @@ const Variant = ({
         {vari.imgUrl
           ? vari.imgUrl?.map((img, index) => (
               <div key={index} className="w-24 relative">
-                <img className="" src={img} />
+                <img className="" src={thumbnailConvert(img)} />
                 <div
                   onClick={() => handleDeleteImage(index, vari.id)}
                   className="absolute top-0 right-0 cursor-pointer opacity-70 hover:opacity-100"

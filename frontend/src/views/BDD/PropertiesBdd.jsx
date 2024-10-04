@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import up from "../../assets/images/up.svg";
 import down from "../../assets/images/down.svg";
 import { getProjects } from "../../redux/actions";
+import thumbnailConvert from "../../utils/convertThumbnail";
 const PropertiesBdd = () => {
   const dispatch = useDispatch();
 
@@ -21,7 +22,6 @@ const PropertiesBdd = () => {
   //   }
   // ]
   const products = useSelector((state) => state.projects);
-console.log(products);
   const count = products?.length;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -91,74 +91,6 @@ console.log(products);
       },
     }));
   };
-
-  // const handleSaveChanges = () => {
-  //   const usersWithChanges = Object.keys(changes).map((userId) => ({
-  //     id: userId,
-  //     owner: changes[userId].owner,
-  //     checked: changes[userId].checked,
-  //   }));
-  //   axios
-  //     .put("/users", { users: usersWithChanges })
-  //     .then((response) => {
-  //       // Maneja la respuesta de la solicitud, por ejemplo, muestra una notificación de éxito
-  //       alert("Cambios guardados con éxito");
-  //       if (Object.keys(filter).length === 0) {
-  //         dispatch(getUsers(accessCode, order, currentPage));
-  //       } else {
-  //         handleFilter(filter);
-  //       }
-  //       setIsChanging(false);
-  //     })
-  //     .catch((error) => {
-  //       // Maneja errores, muestra una notificación de error, etc.
-  //       console.error("Error al guardar los cambios", error);
-  //       setIsChanging(false);
-  //     });
-  // };
-
-  // const handleChange = () => {
-  //   setIsChanging(true);
-  // };
-
-  // const handleFilter = (e) => {
-  //   if (Object.keys(e).length > 0) {
-  //     axios
-  //       .post(`/filter?code=${accessCode}&page=${currentPage}`, e)
-  //       .then((res) => {
-  //         const users = res.data;
-  //         dispatch(updateFilteredUsers(users));
-  //         setFilter(e);
-  //       })
-  //       .catch((err) => alert(err));
-  //   } else {
-  //   }
-  // };
-
-  // const handleSearch = (e) => {
-  //   setSearch(e.target.value);
-  // };
-
-  // const handleSubmitSearch = (e) => {
-  //   e.preventDefault();
-  //   handleSearchEvent();
-  // };
-  // const handleNotSearching = (e) => {
-  //   e.preventDefault();
-  //   setIsSearching(false);
-  //   setSearch("");
-  //   dispatch(getUsers(accessCode, order, 1));
-  // };
-
-  // const handleSearchEvent = () => {
-  //   dispatch(getUsers(accessCode, order, currentPage, search));
-  //   setIsSearching(true);
-  // };
-
-  // const handleOrder = (value) => {
-  //   setOrder(value)
-  //   dispatch(getUsers(accessCode, value, currentPage, search));
-  // }
 
   return (
     <div className="overflow-x-auto ">
@@ -299,7 +231,7 @@ console.log(products);
                         </div>
                       </div>
                       <div className="w-20">
-                        <img src={product.img} alt="propiedad" />
+                        <img src={thumbnailConvert(product.img)} alt="propiedad" />
                       </div>
                     </div>
                   </td>
