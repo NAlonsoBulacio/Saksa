@@ -39,7 +39,7 @@ const CarouselSlider = () => {
     <div className="carousel-div w-full">
       <div className="carousel-slider overflow-hidden">
         <img
-          key={compressImage(selectedIndex)}
+          key={selectedIndex}
           src={selectedImage.img}
           alt="Imagen carrusel"
           className="carousel-img image-fade-in-zoom"
