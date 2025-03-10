@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../../assets/destacadas/edificio-9dejulio.jpg";
-import img2 from "../../assets/destacadas/boulevard-consultorios.jpg";
-import img3 from "../../assets/destacadas/edificio-las-piedras.jpg";
+import compressImage from "../../utils/compressImage";
 import "./NewCarousel.css";
 const CarouselSlider = () => {
   const images = [
@@ -41,7 +39,7 @@ const CarouselSlider = () => {
     <div className="carousel-div w-full">
       <div className="carousel-slider overflow-hidden">
         <img
-          key={selectedIndex}
+          key={compressImage(selectedIndex)}
           src={selectedImage.img}
           alt="Imagen carrusel"
           className="carousel-img image-fade-in-zoom"
