@@ -40,7 +40,7 @@ const CarouselSlider = () => {
       <div className="carousel-slider overflow-hidden">
         <img
           key={selectedIndex}
-          src={selectedImage.img}
+          src={compressImage(selectedImage.img)}
           alt="Imagen carrusel"
           className="carousel-img image-fade-in-zoom"
         />
@@ -49,7 +49,9 @@ const CarouselSlider = () => {
           <h2 className="w-full font-montserrat-300 text-left">
             - PROYECTOS RECIENTES
           </h2>
-          <h1 className="w-full font-raleway-700 text-5xl md:text-7xl text-left ">
+          <h1 className="w-full font-raleway-700 text-5xl md:text-7xl text-left "
+            translate="no"
+          >
             {selectedImage.text}
           </h1>
           <a href="/proyectos" className="my-2">

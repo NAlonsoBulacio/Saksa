@@ -12,7 +12,7 @@ const reducer = (state = initialState, action) => {
         id: project.id,
         name: project.productName,
         type: project.type,
-        img: project.images[0],
+        img: project.images,
         description: project.description,
         year: project.year,
         surface: project.surface,
