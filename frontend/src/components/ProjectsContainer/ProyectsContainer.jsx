@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./ProjectsContainer.css";
 import loading from "../../assets/loading/ripples.svg";
+import compressImage from "../../utils/compressImage";
 
 const ProjectsContainer = ({ projects }) => {
   const [localProjects, setLocalProjects] = useState([]);
@@ -64,7 +65,7 @@ const ProjectsContainer = ({ projects }) => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <img
-                      src={project.img}
+                      src={compressImage(project.img)}
                       alt={`Chat ${index}`}
                       className="w-full h-auto hover:scale-110 transition duration-700 shadow-2xl hover:brightness-30"
                     />
